@@ -1,0 +1,55 @@
+# TWO-KEY FILE (Rules 3). Changes need a second human reviewer.
+# Only fields listed here may be stored in events or sent to any LLM.
+version: 1
+
+# Targets a column mapping may point at. Anything else in a source file is dropped at parse time.
+canonical_fields:
+  patient_name:     {kind: identifier}   # stored in patient_identifiers, tokenised before any LLM call
+  phone:            {kind: identifier}
+  hospital_number:  {kind: identifier}
+  sex:              {kind: demographic}
+  age:              {kind: demographic}
+  birth_year:       {kind: demographic}
+  event_type:       {kind: schedule}     # raw label, mapped to an event type by the confirmed mapping
+  event_date:       {kind: schedule}
+  appointment_date: {kind: schedule}
+  department:       {kind: schedule}
+  status:           {kind: schedule}
+  ignore:           {kind: none}
+
+# Event types Medora records. Schedule facts only. No results, diagnoses or clinical notes.
+event_types:
+  - tb_decision_recorded
+  - surgery_recorded         # fallback pathway: surgery to oncology handover
+  - appointment_booked
+  - appointment_attended
+  - appointment_missed
+  - appointment_cancelled
+  - contact_attempted
+  - contact_outcome_recorded
+  - correction
+
+# Keys allowed inside events.payload.
+event_payload_fields:
+  - department
+  - appointment_date
+  - status_label
+  - event_label
+  - outcome
+  - reason_code
+  - corrected_field
+  - corrected_value
+
+# Fields that may appear in an LLM request. Identifier kinds go only as Presidio tokens.
+llm_fields:
+  plain: [header, sex, age, birth_year, event_type, event_date, appointment_date, department, status]
+  tokenised_only: [patient_name, phone, hospital_number]
+
+# Inputs the priority ranking function may read (F11). Unit-tested.
+ranking_inputs: [days_overdue, missed_count, attempts, unreachable, due_by, patient_id]
+
+# Input keys each LLM task may send. llm.call rejects anything else before any network call.
+llm_tasks:
+  mapping_proposal: [headers, sample_rows, target_fields]          # sample_rows are shape signatures only
+  vision_extract:   [image_crop, fields, page_hint]                  # a crop, never a full page when a crop works
+  reason_code:      [text_tokenised, allowed_codes]

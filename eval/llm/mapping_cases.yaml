@@ -1,0 +1,34 @@
+# Eval set for prompts/mapping_v1 (S10). Header sets only, no values. Labels are DRAFT, pending human sign-off.
+status: draft
+labelled_by: null
+cases:
+  - {headers: {"Patient Name": patient_name, "Mobile": phone, "UHID": hospital_number, "Date": event_date}}
+  - {headers: {"Name": patient_name, "Phone No": phone, "MRN": hospital_number, "Visit Date": event_date}}
+  - {headers: {"Pt Name": patient_name, "Contact": phone, "CR No": hospital_number, "DOV": event_date}}
+  - {headers: {"नाम": patient_name, "मोबाइल": phone, "दिनांक": event_date}}
+  - {headers: {"Sex": sex, "Age": age}}
+  - {headers: {"Gender": sex, "Age (yrs)": age}}
+  - {headers: {"YOB": birth_year, "Name of patient": patient_name}}
+  - {headers: {"Department": department, "Patient Name": patient_name}}
+  - {headers: {"Unit": department, "Status": status}}
+  - {headers: {"Attendance": status, "Visit Type": event_type}}
+  - {headers: {"Next Appointment": appointment_date, "Date": event_date}}
+  - {headers: {"Appt Date": appointment_date, "Registration Date": event_date}}
+  - {headers: {"Diagnosis": ignore, "Patient Name": patient_name}}
+  - {headers: {"Histopathology": ignore, "Stage": ignore, "UHID": hospital_number}}
+  - {headers: {"Remarks": ignore, "Doctor": ignore, "Mobile No": phone}}
+  - {headers: {"Sr No": ignore, "Name": patient_name}}
+  - {headers: {"S.No.": ignore, "IPD No": hospital_number}}
+  - {headers: {"Lab Result": ignore, "Date": event_date}}
+  - {headers: {"Drug": ignore, "Dose": ignore, "Patient ID": hospital_number}}
+  - {headers: {"Event": event_type, "Event Date": event_date}}
+  - {headers: {"Decision": event_type, "TB Date": event_date}}
+  - {headers: {"Procedure": event_type, "OT Date": event_date}}
+  - {headers: {"Outcome": status, "Name": patient_name}}
+  - {headers: {"DNA (Y/N)": status, "Phone": phone}}
+  - {headers: {"Address": ignore, "Pin code": ignore, "Phone": phone}}
+  - {headers: {"Aadhaar": ignore, "Name": patient_name}}
+  - {headers: {"Attendant name": ignore, "Patient name": patient_name}}
+  - {headers: {"Attendant phone": ignore, "Patient phone": phone}}
+  - {headers: {"Weight": ignore, "BP": ignore, "Age": age}}
+  - {headers: {"Chemo cycle": ignore, "Date given": event_date}}

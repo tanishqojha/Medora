@@ -1,0 +1,31 @@
+# TWO-KEY FILE (Rules 3). Approved call scripts with slots only. No free generation.
+# STATUS: PROPOSED drafts. Not signed. The UI shows "Not yet approved" until a clinician signs.
+# Slots: {patient_name} {coordinator_name} {hospital_name} {step_label} {days} {last_date}
+templates:
+  - key: overdue_booking
+    version: 1
+    language: en
+    body: >-
+      Namaste, am I speaking with {patient_name}? This is {coordinator_name} calling from {hospital_name}.
+      Our records show the {step_label} has not been booked yet. I am calling to help you book it.
+      Is there anything making it hard to come in?
+  - key: overdue_booking
+    version: 1
+    language: hi
+    body: >-
+      नमस्ते, क्या मेरी बात {patient_name} जी से हो रही है? मैं {hospital_name} से {coordinator_name} बोल रही हूँ।
+      हमारे रिकॉर्ड में {step_label} अभी बुक नहीं हुई है। मैं इसे बुक करने में आपकी मदद के लिए फ़ोन कर रही हूँ।
+      क्या आने में कोई परेशानी है?
+  - key: missed_visit
+    version: 1
+    language: en
+    body: >-
+      Namaste, am I speaking with {patient_name}? This is {coordinator_name} from {hospital_name}.
+      Our records show a visit on {last_date} was missed. I can help you get a new date.
+      Is there anything making it hard to come in?
+  - key: unreachable_retry
+    version: 1
+    language: en
+    body: >-
+      Namaste, this is {coordinator_name} from {hospital_name}. We have been trying to reach {patient_name}
+      about the {step_label}. Please call us back at the hospital number on your card.

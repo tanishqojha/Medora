@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Priority Card Drawing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&display=swap">
+<style>
+/* One Apple-style dimensional drawing sheet: title block, notes, plan, envelope, exploded view, details, tables. Monochrome, light only. */
+:root{--paper:#ececec;--sheet:#ffffff;--ink:#111;--ink2:#444;--ink3:#7a7a7a;--fill:#f3f3f3;--fill2:#e6e6e6;--f:'Arimo','Helvetica Neue',Helvetica,Arial,sans-serif;color-scheme:light}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f)}
+.wrap{max-width:1760px;margin:0 auto;padding:24px 16px 40px}
+.scroll{overflow-x:auto;background:var(--sheet);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+svg{display:block;width:100%;min-width:1100px;height:auto}
+.tb{background:var(--sheet);border:1.2px solid var(--ink);border-radius:16px;overflow:hidden;display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;margin-bottom:24px}
+.tb>div{border-right:.8px solid var(--ink);border-bottom:.8px solid var(--ink);padding:10px 14px;min-width:0}
+.tb>div:nth-child(4),.tb>div:nth-child(7){border-right:0}
+.tb .big{grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between;gap:12px}
+.lbl{text-transform:uppercase;font-size:9.5px;letter-spacing:.06em;color:var(--ink2)}
+.tb h1{font-weight:400;letter-spacing:.1em;font-size:clamp(28px,4vw,44px);margin:4px 0 0;line-height:1;text-transform:uppercase}
+.tb .v{font-size:13px;letter-spacing:.05em;text-transform:uppercase;margin-top:2px;font-variant-numeric:tabular-nums}
+.tb .big .v{font-size:11px;color:var(--ink2);line-height:1.6}
+.tb .notes{grid-column:1/-1;border-right:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:6px 24px;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;line-height:1.9}
+.tb .notes ol{margin:4px 0 0;padding-left:20px}
+.tb .nh{font-weight:700;font-size:13px;letter-spacing:.06em}
+.tb .nh span{font-weight:400;font-size:11.5px;margin-left:6px}
+.tb .figs{grid-column:1/-1;border-right:0;border-bottom:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px 18px}
+.tb .figs>div{border-left:.8px solid var(--ink);padding-left:14px}
+.tb .figs>div:first-child{border-left:0;padding-left:0}
+.tb .figs .v{font-size:18px;letter-spacing:.06em;text-transform:none;margin-top:4px}
+@media (max-width:640px){.tb{grid-template-columns:1fr 1fr}.tb .big{grid-column:1/-1;grid-row:auto}}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11px;color:var(--ink2);padding:10px 2px 0;text-transform:uppercase;letter-spacing:.06em}
+.foot b{font-weight:700;color:var(--ink)}
+.border{fill:none;stroke:var(--ink);stroke-width:1.2}
+.obj{fill:var(--sheet);stroke:var(--ink);stroke-width:1.6;stroke-linejoin:round}
+.well{fill:var(--fill);stroke:var(--ink);stroke-width:1}
+.slot{fill:none;stroke:var(--ink2);stroke-width:.8;stroke-dasharray:4 3}
+.hug{fill:var(--fill2);stroke:var(--ink);stroke-width:1}
+.thin{fill:none;stroke:var(--ink);stroke-width:.8}
+.ph{fill:none;stroke:var(--ink3);stroke-width:.8;stroke-dasharray:14 3 3 3}
+.cl{fill:none;stroke:var(--ink3);stroke-width:.7;stroke-dasharray:16 3 2 3}
+.dl{stroke:var(--ink);stroke-width:.7;fill:none}
+.ext{stroke:var(--ink);stroke-width:.55;fill:none}
+.arrow{fill:var(--ink)}
+.hl{stroke:var(--ink2);stroke-width:.7}
+.hs{stroke:var(--ink);stroke-width:.8}
+.env{fill:none;stroke:var(--ink);stroke-width:.8;stroke-dasharray:10 3 2 3}
+.dt{font:400 11px var(--f);fill:var(--ink);paint-order:stroke;stroke:var(--sheet);stroke-width:4px;stroke-linejoin:round}
+.dts{font:400 9.5px var(--f);fill:var(--ink2);letter-spacing:.06em;text-transform:uppercase;paint-order:stroke;stroke:var(--sheet);stroke-width:3px}
+.sl{font:400 9px var(--f);fill:var(--ink2);letter-spacing:.08em;text-transform:uppercase}
+.nt{font:400 11.5px var(--f);fill:var(--ink);letter-spacing:.06em;text-transform:uppercase}
+.nth{font:700 13px var(--f);fill:var(--ink);letter-spacing:.06em}
+.vt{font:400 12px var(--f);fill:var(--ink);letter-spacing:.1em;text-transform:uppercase}
+.nb{fill:var(--sheet);stroke:var(--ink);stroke-width:.9}
+.nbt{font:400 9.5px var(--f);fill:var(--ink)}
+.lead{stroke:var(--ink);stroke-width:.7;fill:none}
+.dot{fill:var(--ink)}
+.th{font:400 10.5px var(--f);fill:var(--ink);letter-spacing:.05em;text-transform:uppercase}
+.tc{font:400 10.5px var(--f);fill:var(--ink)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="tb">
+    <div class="big">
+      <div><div class="lbl">UI component · dimensional drawing</div><h1>Priority card</h1></div>
+      <div class="v">Lead item of a ranked work list: status chips, title, reason well, primary and secondary action. Architecture only.</div>
+    </div>
+    <div><div class="lbl">Dwg no.</div><div class="v">UI-PRIORITY-CARD-001</div></div>
+    <div><div class="lbl">Rev</div><div class="v">A · 2026-10-30</div></div>
+    <div><div class="lbl">Sheets</div><div class="v">1</div></div>
+    <div><div class="lbl">Units</div><div class="v">CSS px @ 1×</div></div>
+    <div><div class="lbl">Scale</div><div class="v">Noted per view</div></div>
+    <div><div class="lbl">Source</div><div class="v">Built app · measured in Chromium at 1440 × 900 · card ×60, chip ×88, icon ×93</div></div>
+    <div class="notes">
+      <div><span class="nh">NOTES:<span>(UNLESS OTHERWISE SPECIFIED)</span></span><ol>
+        <li>Do not scale from screen. Read the numbers.</li>
+        <li>All dimensions in CSS px at 1×. Measured from the rendered component.</li>
+        <li>Slots are placeholders. Text, icons and copy are not part of the drawing.</li>
+        <li>Every dimension is a variable. Values and formulas are in the tables.</li></ol></div>
+      <div><span class="nh" aria-hidden="true">&nbsp;</span><ol start="5">
+        <li>HUG = sized by content · FLEX = takes the remaining space · FILL = full width of its parent.</li>
+        <li>R4 (pill) = border-radius 999px, which renders as height ÷ 2.</li>
+        <li>[TBD] = not defined in the source. Drawn as a schematic.</li>
+        <li>Grayscale by design. Color is out of scope.</li></ol></div>
+    </div>
+    <div class="figs">
+      <div><div class="lbl">W · card-w</div><div class="v">712–1384</div></div>
+      <div><div class="lbl">S1 · card-pad</div><div class="v">24</div></div>
+      <div><div class="lbl">S2 · col-gap</div><div class="v">24</div></div>
+      <div><div class="lbl">W2 · action-col</div><div class="v">288</div></div>
+      <div><div class="lbl">H1 · chip-h</div><div class="v">2·s11 + i2</div></div>
+      <div><div class="lbl">R1 · r-card</div><div class="v">16</div></div>
+      <div><div class="lbl">H4 · card-h</div><div class="v">2·s1 + h1 + s4 + h2 + s5 + h5</div></div>
+    </div>
+  </header>
+  <div class="scroll"><svg id="sh1" viewBox="0 0 1700 1060" role="img" aria-label="Priority card: plan view with variable dimensions, shadow envelope, exploded layers, chip, well and action details, radius details, stacked layout, variable tables"></svg></div>
+  <div class="foot"><span>2026-10-30 &nbsp;|&nbsp; UI component reference</span><span><b>Priority card, architecture</b> &nbsp;|&nbsp; 1</span></div>
+</div>
+
+<script>
+(function(){
+const NS='http://www.w3.org/2000/svg';let sv,A,HAT,uid=0;
+function mk(t,a,p){const e=document.createElementNS(NS,t);for(const k in a)if(a[k]!=null)e.setAttribute(k,a[k]);(p||sv).appendChild(e);return e}
+function tx(x,y,s,c,a,p){const t=mk('text',Object.assign({x:x,y:y,class:c||'dt'},a||{}),p);t.textContent=s;return t}
+function rr(x,y,w,h,r,c){return mk('rect',{x:x,y:y,width:w,height:h,rx:r,class:c})}
+function begin(id){sv=document.getElementById(id);sv.innerHTML='';const n=uid++;const d=mk('defs',{});const m=mk('marker',{id:'ar'+n,viewBox:'0 0 10 10',refX:10,refY:5,markerWidth:7,markerHeight:7,orient:'auto-start-reverse',markerUnits:'userSpaceOnUse'},d);mk('path',{d:'M0,1.7 L10,5 L0,8.3 z',class:'arrow'},m);
+ const pt=mk('pattern',{id:'hat'+n,width:5,height:5,patternUnits:'userSpaceOnUse',patternTransform:'rotate(45)'},d);mk('line',{x1:0,y1:0,x2:0,y2:5,class:'hl'},pt);A='url(#ar'+n+')';HAT='url(#hat'+n+')';rr(20,20,1660,1020,16,'border')}
+function dimH(x1,x2,y,e1,e2,l,o){o=o||{};[[x1,e1],[x2,e2]].forEach(([x,e])=>{if(e==null)return;const s=Math.sign(y-e)||1;mk('line',{x1:x,y1:e+s*3,x2:x,y2:y+s*5,class:'ext'})});
+ if(x2-x1>=28)mk('line',{x1:x1,y1:y,x2:x2,y2:y,class:'dl','marker-start':A,'marker-end':A});else{mk('line',{x1:x1-13,y1:y,x2:x1,y2:y,class:'dl','marker-end':A});mk('line',{x1:x2+13,y1:y,x2:x2,y2:y,class:'dl','marker-end':A});mk('line',{x1:x1,y1:y,x2:x2,y2:y,class:'dl'})}
+ tx((x1+x2)/2+(o.dx||0),(o.below?y+13:y-4)+(o.dy||0),l,o.c||'dt',{'text-anchor':'middle'})}
+function dimV(y1,y2,x,e1,e2,l,o){o=o||{};[[y1,e1],[y2,e2]].forEach(([y,e])=>{if(e==null)return;const s=Math.sign(x-e)||1;mk('line',{x1:e+s*3,y1:y,x2:x+s*5,y2:y,class:'ext'})});
+ if(y2-y1>=28)mk('line',{x1:x,y1:y1,x2:x,y2:y2,class:'dl','marker-start':A,'marker-end':A});else{mk('line',{x1:x,y1:y1-13,x2:x,y2:y1,class:'dl','marker-end':A});mk('line',{x1:x,y1:y2+13,x2:x,y2:y2,class:'dl','marker-end':A});mk('line',{x1:x,y1:y1,x2:x,y2:y2,class:'dl'})}
+ const c=(y1+y2)/2+(o.dy||0);if(o.side){const r=o.side==='r';tx(r?x+6:x-6,c+4,l,o.c||'dt',{'text-anchor':r?'start':'end'})}else tx(x-5,c,l,o.c||'dt',{'text-anchor':'middle',transform:'rotate(-90 '+(x-5)+' '+c+')'})}
+function callout(px,py,ex,ey,l,dir,c){const s=dir||(ex>=px?1:-1);mk('circle',{cx:px,cy:py,r:1.8,class:'dot'});mk('polyline',{points:px+','+py+' '+ex+','+ey+' '+(ex+s*10)+','+ey,class:'lead'});tx(ex+s*14,ey+4,l,c||'dt',{'text-anchor':s>0?'start':'end'})}
+function rad(cx,cy,r,c,l,L){const sx=c.includes('l')?-1:1,sy=c.includes('t')?-1:1;const ox=cx-sx*r,oy=cy-sy*r;const px=ox+sx*r*Math.SQRT1_2,py=oy+sy*r*Math.SQRT1_2;callout(px,py,px+sx*L,py+sy*L,l,sx)}
+function nb(x,y,n){mk('rect',{x:x-6,y:y-6,width:12,height:12,class:'nb'});tx(x,y+3.5,String(n),'nbt',{'text-anchor':'middle'})}
+function slotLabel(x,y,w,h,l,al){tx(al==='l'?x+6:x+w/2,y+h/2+3.2,l,'sl',{'text-anchor':al==='l'?'start':'middle'})}
+function title(x,y,t,s){tx(x,y,t,'vt',{'text-anchor':'middle'});if(s)tx(x,y+14,s,'dts',{'text-anchor':'middle'})}
+function notes(list){const NX=50,NY=58;tx(NX,NY,'NOTES:','nth');tx(NX+62,NY,'(UNLESS OTHERWISE SPECIFIED)','nt');
+ list.forEach(([n,t],i)=>{const y=NY+30+i*24;if(n){nb(NX+6,y-4,n);tx(NX+22,y,t,'nt')}else tx(NX,y,t,'nt')})}
+function table(x,y,ttl,rows){const ws=[40,88,96],rh=17;tx(x,y-8,ttl,'vt');
+ const all=[['Code','Variable','Value']].concat(rows);all.forEach((r,i)=>{let cx2=x;r.forEach((c,j)=>{mk('rect',{x:cx2,y:y+i*rh,width:ws[j],height:rh,class:'thin'});tx(cx2+(j?ws[j]/2:6),y+i*rh+12,c,i?'tc':'th',{'text-anchor':j?'middle':'start'});cx2+=ws[j]})});return y+all.length*rh+34}
+function detailRef(cx,cy,r,lbl,lx,ly){mk('circle',{cx:cx,cy:cy,r:r,class:'ph'});const a=Math.atan2(ly-cy,lx-cx);mk('line',{x1:cx+r*Math.cos(a),y1:cy+r*Math.sin(a),x2:lx,y2:ly,class:'lead'});tx(lx+(lx<cx?-4:4),ly+4,lbl,'dts',{'text-anchor':lx<cx?'end':'start'})}
+
+/* Reference geometry, measured (CSS px). Card 1128 × 222 at a 1440 px viewport. */
+const W=1128,H=222;
+const G={chips:[[24,81],[109,90],[203,300]],chipY:24,H1:18,titleY:50,H2:36,wellY:94,H5:104,wellX:24,wellW:768,
+ icon:[40,110,20],body:[68,110,708,72],lines:[[110,24],[138,18],[160,22]],colX:816,W2:288,act:[[24,42],[74,42]]};
+const VAR={
+ spacing:[['S1','card-pad','24'],['S2','col-gap','24'],['S3','chip-gap','4'],['S4','chips-title','8'],['S5','title-well','8'],['S6','well-pad','16'],['S7','icon-gap','8'],['S8','action-gap','8'],['S9','action-pad-x','24'],['S10','chip-pad-x','8'],['S11','chip-pad-y','2']],
+ size:[['I1','well-icon','20'],['I2','chip-icon','14'],['H1','chip-h','2·S11+I2 = 18'],['H2','title-line','36'],['H3','action-h','42 · 48 <768'],['H5','well-h','2·S6+HUG'],['H4','card-h','REF 222'],['W2','action-col','288'],['W','card-w','712–1384'],['BP','stack-below','1024']],
+ radius:[['R1','r-card','16'],['R2','r-well','8'],['R3','r-action','8'],['R4','r-chip','H1÷2 = 9']],
+ shadow:[['Y','shadow-y','1'],['BL','shadow-blur','8'],['SP','shadow-spread','0'],['E1','env-top','BL+SP−Y = 7'],['E2','env-side','BL+SP = 8'],['E3','env-bottom','BL+SP+Y = 9']]
+};
+
+function cardPlan(ox,oy,k,o){o=o||{};const X=v=>ox+v*k,Y=v=>oy+v*k,lab=k>=.55;
+ mk('rect',{x:X(0),y:Y(0),width:W*k,height:H*k,rx:16*k,class:'obj'});
+ G.chips.forEach(([x,w],i)=>{mk('rect',{x:X(x),y:Y(G.chipY),width:w*k,height:G.H1*k,rx:9*k,class:'hug'})});
+ if(lab)tx(X(203)+300*k/2,Y(G.chipY)+G.H1*k/2+3,'CHIP · HUG','sl',{'text-anchor':'middle'});
+ mk('rect',{x:X(24),y:Y(G.titleY),width:768*k,height:G.H2*k,rx:2,class:'slot'});if(lab)slotLabel(X(24),Y(G.titleY),768*k,G.H2*k,'Title slot · flex · wraps','l');
+ mk('rect',{x:X(G.wellX),y:Y(G.wellY),width:G.wellW*k,height:G.H5*k,rx:8*k,class:'well'});
+ const [ix,iy,is]=G.icon;mk('rect',{x:X(ix),y:Y(iy),width:is*k,height:is*k,class:'thin'});mk('path',{d:'M'+X(ix)+','+Y(iy)+' L'+X(ix+is)+','+Y(iy+is)+' M'+X(ix+is)+','+Y(iy)+' L'+X(ix)+','+Y(iy+is),class:'thin'});
+ const labels=['Reason slot · fill','Meta slot · fill','Source slot · hug'];
+ G.lines.forEach(([y,h],i)=>{const w=i===2?260:708;mk('rect',{x:X(68),y:Y(y),width:w*k,height:h*k,rx:2,class:'slot'});if(lab)slotLabel(X(68),Y(y),w*k,h*k,labels[i],'l')});
+ G.act.forEach(([y,h],i)=>{mk('rect',{x:X(G.colX),y:Y(y),width:G.W2*k,height:h*k,rx:8*k,class:i?'hug':'obj'});if(lab)slotLabel(X(G.colX),Y(y),G.W2*k,h*k,i?'Secondary action · fill':'Primary action · fill')});
+ if(o.cl!==false){mk('line',{x1:X(-14),y1:Y(G.titleY+18),x2:X(W+14),y2:Y(G.titleY+18),class:'cl'});mk('line',{x1:X(G.colX+144),y1:Y(-14),x2:X(G.colX+144),y2:Y(H+14),class:'cl'})}
+ return {X,Y}}
+
+begin('sh1');
+notes([[1,'TITLE SLOT FLEXES AND WRAPS. CARD HEIGHT HUGS CONTENT (H4 IS A REFERENCE).'],[2,'CHIPS HUG CONTENT, GAP S3, AND WRAP. ROW HEIGHT = H1.'],[3,'WELL HAS NO BORDER, TINT ONLY. NOT CONCENTRIC: R2 IS NOT DERIVED.'],[4,'ACTION COLUMN W2 IS FIXED. BOTH ACTIONS FILL IT, PRIMARY FIRST.'],[5,'BELOW BP THE COLUMNS STACK AND ACTIONS FILL THE CARD. SEE STACKED VIEW.'],[6,'BELOW 768 H3 = 48 FOR TOUCH.'],[7,'NO BORDER: THE EDGE IS THE SHADOW ONLY. KEEP E1, E2, E3 CLEAR.'],[0,'MAX CONTENT WIDTH 1440 − 2·MARGIN (28) = 1384. MIN 1024 − NAV 256 − 2·28 = 712.']]);
+
+/* Plan view 0.6:1 */
+{const k=.6,PX=600,PY=340;const {X,Y}=cardPlan(PX,PY,k);
+ nb(X(780),Y(G.titleY+10),1);nb(X(515),Y(33),2);nb(X(780),Y(G.wellY+12),3);nb(X(1092),Y(95),4);
+ const ty=Y(-24);dimH(X(0),X(24),ty,Y(0),Y(24),'S1',{dx:-8});dimH(X(24),X(792),ty,null,Y(24),'FLEX',{c:'dts'});dimH(X(792),X(816),ty,null,Y(24),'S2');dimH(X(816),X(1104),ty,null,Y(24),'W2');dimH(X(1104),X(1128),ty,null,Y(0),'S1',{dx:8});
+ dimH(X(0),X(W),Y(-50),Y(-28),Y(-28),'W');tx(X(W/2)+70,Y(-50)-4,'= 712 – 1384 · REF 1128 (FILL)','dts',{'text-anchor':'start'});
+ const lx=X(-34);[[0,24,'S1',0],[24,42,'H1',-3],[42,50,'S4',-9],[50,86,'H2',4],[86,94,'S5',9],[94,198,'H5',0],[198,222,'S1',0]].forEach(([a,b,l,d])=>dimV(Y(a),Y(b),lx,X(0),X(0),l,{side:'l',dy:d}));
+ dimV(Y(0),Y(H),X(-96),X(-40),X(-40),'(REF 222)');
+ const rx=X(W+34);[[24,66,'H3'],[66,74,'S8'],[74,116,'H3']].forEach(([a,b,l])=>dimV(Y(a),Y(b),rx,X(1104),X(1104),l,{side:'r'}));
+ rad(X(W),Y(H),16*k,'br','R1',18);
+ detailRef(X(60),Y(33),22,'DETAIL A',X(-30),Y(-30));
+ detailRef(X(52),Y(146),26,'DETAIL B',X(-20),Y(H+40));
+ detailRef(X(960),Y(70),40,'DETAIL C',X(1040),Y(H+44));
+ title(X(W/2),Y(H)+62,'Plan view','Scale 0.6:1 · reference W = 1128');}
+
+/* Shadow envelope 0.22:1 */
+{const s=.22,EX=790,EY=110;const ex=v=>EX+v*s,ey=v=>EY+v*s,e=[7,8,9];
+ mk('rect',{x:ex(-8),y:ey(-7),width:(W+16)*s,height:(H+16)*s,class:'env'});
+ mk('rect',{x:ex(0),y:ey(1),width:W*s,height:H*s,rx:16*s,fill:HAT,class:'hs'});
+ mk('rect',{x:ex(0),y:ey(0),width:W*s,height:H*s,rx:16*s,class:'obj','fill-opacity':.85});
+ callout(ex(W*.25),ey(-7),ex(W*.25)-20,ey(-7)-18,'E1 = 7',-1);callout(ex(-8),ey(H/2),ex(-8)-14,ey(H/2)+30,'E2 = 8',-1);callout(ex(W*.7),ey(H+9),ex(W*.7)+16,ey(H+9)+18,'E3 = 9',1);
+ nb(ex(W+8)+12,ey(-7)+6,7);
+ title(ex(W/2),ey(H+16)+40,'Shadow envelope','Scale 0.22:1 · E1 / E2 / E3 from Y, BL, SP');}
+
+/* Exploded view */
+{const sc=.24,TX=330,TY=860,gap=60,a=.94*sc,b=.17*sc,c=-.34*sc,dd=.47*sc;
+ const P=(x,y,z)=>[TX+a*x+c*y,TY+b*x+dd*y-z];
+ const Gz=z=>mk('g',{transform:'matrix('+a+','+b+','+c+','+dd+','+TX+','+(TY-z)+')'});
+ const R2=(g,x,y,w,h,r,cls,extra)=>mk('rect',Object.assign({x,y,width:w,height:h,rx:r,class:cls,'vector-effect':'non-scaling-stroke'},extra||{}),g);
+ [[0,0],[W,0],[W,H],[0,H]].forEach(([x,y])=>{const p1=P(x,y,gap),p2=P(x,y,gap*4);mk('line',{x1:p1[0],y1:p1[1],x2:p2[0],y2:p2[1],class:'ph'})});
+ let g=Gz(0);R2(g,-30,-30,W+60,H+60,0,'thin');
+ g=Gz(gap);R2(g,0,1,W,H,16,'hs',{fill:HAT});
+ g=Gz(gap*2);R2(g,0,0,W,H,16,'obj');
+ g=Gz(gap*3);R2(g,24,94,768,104,8,'well');R2(g,816,74,288,42,8,'hug');G.chips.forEach(([x,w])=>R2(g,x,24,w,18,9,'hug'));
+ g=Gz(gap*4);R2(g,24,50,768,36,2,'slot');R2(g,40,110,20,20,0,'thin');G.lines.forEach(([y,h],i)=>R2(g,68,y,i===2?260:708,h,2,'slot'));R2(g,816,24,288,42,8,'obj');
+ const LX=215;
+ [[0,[-30,H+30],'L0 · Canvas','Page background'],[gap,[0,H],'L1 · Shadow','Y · BL · SP'],[gap*2,[0,H],'L2 · Container','R1 · no border'],[gap*3,[24,198],'L3 · Surfaces','Well R2 · chips R4 · secondary R3'],[gap*4,[24,86],'L4 · Slots & primary','Title · reason · meta · source']].forEach(([z,[x,y],t,st])=>{
+  const p1=P(x,y,z);mk('circle',{cx:p1[0],cy:p1[1],r:1.8,class:'dot'});mk('polyline',{points:p1[0]+','+p1[1]+' '+(LX+10)+','+p1[1]+' '+LX+','+p1[1],class:'lead'});
+  tx(LX-4,p1[1]-2,t,'vt',{'text-anchor':'end'});tx(LX-4,p1[1]+11,st,'dts',{'text-anchor':'end'})});
+ title(400,TY+150,'Exploded view','Axonometric · z gaps not to scale');}
+
+/* Detail A · chip 2.6:1 */
+{const K=2.6,CX=660,CY=630;const X=v=>CX+v*K,Y=v=>CY+v*K;
+ mk('rect',{x:X(0),y:Y(0),width:81*K,height:18*K,rx:9*K,class:'hug'});
+ mk('rect',{x:X(8),y:Y(2),width:14*K,height:14*K,class:'thin'});mk('path',{d:'M'+X(8)+','+Y(2)+' L'+X(22)+','+Y(16)+' M'+X(22)+','+Y(2)+' L'+X(8)+','+Y(16),class:'thin'});
+ mk('rect',{x:X(26),y:Y(2),width:47*K,height:14*K,rx:1,class:'slot'});slotLabel(X(26),Y(2),47*K,14*K,'Label slot');
+ const by=Y(32);dimH(X(0),X(8),by,Y(18),Y(16),'S10',{below:true,dx:-10});dimH(X(8),X(22),by,null,Y(16),'I2',{below:true});dimH(X(22),X(26),by,null,Y(16),'S3',{below:true,dy:12});dimH(X(26),X(73),by,null,Y(16),'HUG',{below:true,c:'dts'});dimH(X(73),X(81),by,null,Y(18),'S10',{below:true,dx:10});
+ dimV(Y(0),Y(2),X(92),X(81),X(81),'S11',{side:'r'});dimV(Y(0),Y(18),X(118),X(81),X(81),'H1',{side:'r'});
+ rad(X(0),Y(18),9*K,'bl','R4',16);
+ title(X(40),Y(18)+76,'Detail A · chip','Scale 2.6:1 · H1 = 2·S11 + I2');}
+
+/* Detail B · reason well 0.55:1 */
+{const k=.44,BX=990,BY=640;const X=v=>BX+v*k,Y=v=>BY+v*k;
+ mk('rect',{x:X(0),y:Y(0),width:768*k,height:104*k,rx:8*k,class:'well'});
+ mk('rect',{x:X(16),y:Y(16),width:20*k,height:20*k,class:'thin'});mk('path',{d:'M'+X(16)+','+Y(16)+' L'+X(36)+','+Y(36)+' M'+X(36)+','+Y(16)+' L'+X(16)+','+Y(36),class:'thin'});
+ [[16,24,708,'Reason slot · fill'],[44,18,708,'Meta slot · fill'],[66,22,260,'Source slot · hug']].forEach(([y,h,w,l])=>{mk('rect',{x:X(44),y:Y(y),width:w*k,height:h*k,rx:2,class:'slot'});slotLabel(X(44),Y(y),w*k,h*k,l,'l')});
+ const by=Y(-16);dimH(X(0),X(16),by,Y(0),Y(16),'S6',{dx:-8});dimH(X(16),X(36),by,null,Y(16),'I1');dimH(X(36),X(44),by,null,Y(16),'S7',{dy:-10});dimH(X(44),X(752),by,null,Y(16),'FLEX',{c:'dts'});dimH(X(752),X(768),by,null,Y(0),'S6',{dx:8});
+ dimV(Y(0),Y(16),X(790),X(768),X(768),'S6',{side:'r'});dimV(Y(16),Y(88),X(790),X(768),X(768),'HUG',{side:'r',c:'dts'});dimV(Y(88),Y(104),X(790),X(768),X(768),'S6',{side:'r'});
+ rad(X(768),Y(104),8*k,'br','R2',14);nb(X(740),Y(-36),3);
+ title(X(384),Y(104)+44,'Detail B · reason well','Scale 0.44:1 · H5 = 2·S6 + HUG');}
+
+/* Detail C · action column 0.85:1 */
+{const k=.85,AX=680,AY=840;const X=v=>AX+v*k,Y=v=>AY+v*k;
+ mk('rect',{x:X(0),y:Y(0),width:288*k,height:42*k,rx:8*k,class:'obj'});mk('rect',{x:X(0),y:Y(50),width:288*k,height:42*k,rx:8*k,class:'hug'});
+ [[0,'Primary'],[50,'Secondary']].forEach(([y,l])=>{mk('rect',{x:X(24),y:Y(y+11),width:240*k,height:20*k,rx:1,class:'slot'});slotLabel(X(24),Y(y+11),240*k,20*k,l+' label · centered')});
+ dimH(X(0),X(24),Y(-16),Y(0),Y(11),'S9',{dx:-8});dimH(X(24),X(264),Y(-16),null,Y(11),'FILL',{c:'dts'});dimH(X(264),X(288),Y(-16),null,Y(0),'S9',{dx:8});
+ dimH(X(0),X(288),Y(110),Y(92),Y(92),'W2',{below:true});
+ dimV(Y(0),Y(42),X(310),X(288),X(288),'H3',{side:'r'});dimV(Y(42),Y(50),X(310),X(288),X(288),'S8',{side:'r'});dimV(Y(50),Y(92),X(310),X(288),X(288),'H3',{side:'r'});
+ rad(X(0),Y(42),8*k,'bl','R3',14);nb(X(-16),Y(20),4);nb(X(-16),Y(70),6);
+ title(X(144),Y(92)+52,'Detail C · action column','Scale 0.85:1');}
+
+/* Radius details 2.4:1 */
+{const q=2.2,y0=835,items=[['R1','Card',16],['R2','Well',8],['R3','Action',8],['R4','Chip (h = H1)',9]];
+ items.forEach(([c,n,r],i)=>{const x0=1000+i*86,L=26;const P=(u,v)=>[x0+u*q,y0-v*q];
+  mk('path',{d:'M'+P(0,L)+' L'+P(0,r)+' A'+r*q+' '+r*q+' 0 0 0 '+P(r,0)+' L'+P(L,0),class:'obj',fill:'none'});
+  const cc=P(r,r);mk('path',{d:'M'+(cc[0]-5)+','+cc[1]+' h10 M'+cc[0]+','+(cc[1]-5)+' v10',class:'thin'});
+  const a=225*Math.PI/180;mk('line',{x1:cc[0],y1:cc[1],x2:cc[0]+r*q*Math.cos(a),y2:cc[1]-r*q*Math.sin(a),class:'dl','marker-end':A});
+  tx(x0+L*q/2+6,y0-L*q+16,c,'dt');tx(x0,y0+18,n,'dts');});
+ title(1130,y0+44,'Radius details','Scale 2.2:1');}
+
+/* Stacked layout below BP 0.3:1 */
+{const k=.22,SW=960,SX=1010,SY=915;const X=v=>SX+v*k,Y=v=>SY+v*k;const SH=24+18+8+36+8+104+24+42+8+42+24;
+ mk('rect',{x:X(0),y:Y(0),width:SW*k,height:SH*k,rx:16*k,class:'obj'});
+ mk('rect',{x:X(24),y:Y(24),width:180*k,height:18*k,rx:9*k,class:'hug'});mk('rect',{x:X(24),y:Y(50),width:(SW-48)*k,height:36*k,class:'slot'});
+ mk('rect',{x:X(24),y:Y(94),width:(SW-48)*k,height:104*k,rx:8*k,class:'well'});
+ mk('rect',{x:X(24),y:Y(222),width:(SW-48)*k,height:42*k,rx:8*k,class:'obj'});mk('rect',{x:X(24),y:Y(272),width:(SW-48)*k,height:42*k,rx:8*k,class:'hug'});
+ slotLabel(X(24),Y(222),(SW-48)*k,42*k,'Primary · fill');slotLabel(X(24),Y(272),(SW-48)*k,42*k,'Secondary · fill');
+ dimV(Y(198),Y(222),X(SW+18),X(SW),X(SW),'S2',{side:'r'});nb(X(SW)+40,Y(40),5);
+ title(X(SW/2),Y(SH)+30,'Stacked layout · W < BP','Scale 0.22:1 · S2 becomes the row gap');}
+
+{let y=table(1426,86,'Spacing',VAR.spacing);y=table(1426,y,'Size',VAR.size);y=table(1426,y,'Radius',VAR.radius);table(1426,y,'Shadow',VAR.shadow);}
+})();
+</script>
+</body>
+</html>

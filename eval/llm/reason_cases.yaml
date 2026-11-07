@@ -1,0 +1,36 @@
+# Eval set for prompts/reason_code_v1 (S10). SYNTHETIC notes. Labels are DRAFT, pending human sign-off.
+status: draft
+labelled_by: null
+cases:
+  - {text: "Bus fare is too much, she cannot come every week", expected: cost}
+  - {text: "They have no money for the travel and stay", expected: cost}
+  - {text: "पैसे नहीं हैं आने के लिए", expected: cost}
+  - {text: "kiraya bahut lagta hai, paise nahi hain", expected: cost}
+  - {text: "Son lost his job, cannot afford the trip now", expected: cost}
+  - {text: "Village is 200 km away, no direct bus", expected: distance}
+  - {text: "बहुत दूर है, रोज़ नहीं आ सकते", expected: distance}
+  - {text: "gaon se aana mushkil hai, bahut door hai", expected: distance}
+  - {text: "It takes them two days to reach the hospital", expected: distance}
+  - {text: "She is scared of the hospital and does not want to come", expected: fear}
+  - {text: "डर लगता है वहाँ जाने से", expected: fear}
+  - {text: "Family is frightened after what happened to the neighbour", expected: fear}
+  - {text: "unko darr lagta hai hospital se", expected: fear}
+  - {text: "He says he is fine now and does not need to come", expected: feeling_better}
+  - {text: "अब ठीक महसूस कर रही है, बोलती है ज़रूरत नहीं", expected: feeling_better}
+  - {text: "ab achha lag raha hai, isliye nahi aaye", expected: feeling_better}
+  - {text: "Feels normal now so they skipped it", expected: feeling_better}
+  - {text: "This number belongs to someone else", expected: wrong_number}
+  - {text: "Person who picked up does not know the patient", expected: wrong_number}
+  - {text: "galat number hai", expected: wrong_number}
+  - {text: "यह नंबर गलत है", expected: wrong_number}
+  - {text: "They shifted to Pune with their daughter", expected: moved}
+  - {text: "Moved back to the village last month", expected: moved}
+  - {text: "दूसरे शहर में रहने चले गए", expected: moved}
+  - {text: "ab Delhi mein rehte hain", expected: moved}
+  - {text: "Wedding in the family, will come after", expected: other}
+  - {text: "Husband was not free to bring her", expected: other}
+  - {text: "Forgot the date", expected: other}
+  - {text: "tareekh bhool gaye", expected: other}
+  - {text: "No reason given", expected: other}
+  - {text: "Exams of the children this week", expected: other}
+  - {text: "Ticket price and the distance both are a problem, mostly money", expected: cost}

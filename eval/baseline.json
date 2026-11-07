@@ -1,0 +1,21 @@
+{
+  "gold_extraction_scan": {
+    "field_accuracy": 0.967391,
+    "provenance_rate": 1.0,
+    "review_rate": 0.041667,
+    "rows": 24.0
+  },
+  "gold_extraction_structured": {
+    "field_accuracy": 0.997757,
+    "provenance_rate": 1.0,
+    "review_rate": 0.0,
+    "rows": 894.0
+  },
+  "gold_identity": {
+    "auto_merge_precision": 1.0,
+    "auto_merges_on_weak_evidence": 0.0,
+    "false_auto_merges": 0.0,
+    "pairs": 141.0,
+    "same_person_recall_to_merge_or_review": 1.0
+  }
+}

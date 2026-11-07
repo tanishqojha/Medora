@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary":"#ffffff","primary-container":"#b45b43","on-primary-fixed":"#3c0800","surface-container":"#efeded","on-error":"#ffffff","on-tertiary-fixed":"#291800","surface-tint":"#98462f","secondary-fixed":"#ccead2","tertiary-fixed-dim":"#f9bb63","on-primary-container":"#fffbff","on-tertiary-container":"#fffbff","primary-fixed":"#ffdbd1","secondary":"#4a6452","on-surface":"#1b1c1c","surface-container-high":"#e9e8e7","inverse-on-surface":"#f2f0f0","surface-bright":"#faf9f8","outline-variant":"#dbc1ba","secondary-fixed-dim":"#b0ceb7","surface-dim":"#dbdad9","surface-container-low":"#f5f3f3","on-secondary":"#ffffff","tertiary-container":"#9c6b18","surface-container-highest":"#e3e2e2","on-primary":"#ffffff","outline":"#88726d","surface":"#faf9f8","background":"#faf9f8","tertiary":"#7f5300","error":"#ba1a1a","tertiary-fixed":"#ffddb3","on-tertiary-fixed-variant":"#633f00","primary-fixed-dim":"#ffb4a1","on-surface-variant":"#55433e","inverse-primary":"#ffb4a1","primary":"#95432d","on-error-container":"#93000a","surface-variant":"#e3e2e2","on-primary-fixed-variant":"#7a2f1b","secondary-container":"#c9e7cf","inverse-surface":"#303030","on-background":"#1b1c1c","on-secondary-container":"#4e6956","error-container":"#ffdad6","on-secondary-fixed":"#062012","surface-container-lowest":"#ffffff","on-secondary-fixed-variant":"#334c3b"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-mobile":"1rem","gutter-mobile":"0.75rem","space-xl":"2.25rem","space-md":"1rem","margin":"1.75rem","space-xs":"0.25rem","space-sm":"0.5rem","space-lg":"1.5rem","gutter":"1.25rem"},"fontFamily":{"headline-lg":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-lg":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"],"body-sm":["Inter"],"label-lg":["Inter"],"label-md":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"]},"fontSize":{"headline-lg":["28px",{"lineHeight":"36px","fontWeight":"600"}],"display-lg":["36px",{"lineHeight":"44px","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"28px","fontWeight":"600"}],"headline-lg-mobile":["22px",{"lineHeight":"30px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"500"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-lg-mobile":["28px",{"lineHeight":"36px","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><img alt="Medora Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XKo2fE7SWr1QTk81a5eFjkBmOLQUoslwgLKZGhp_Oo6AUu0TUg33B3B0tGNhyVE8GC-ZKargPD-sMd5rpUqH4Mwf4xNywxgGBEDSh9y_FiiuOMzWGFlxnrDCOK6K51d73HINB5IWsf3SEVh5kFsdwfNJgPePSXyD1mzE0uBHF0r4xc4io0lEykkX5Pqez3VA7pggkqI787zumqCXmD_LdpHdkijizSISh8-5HJnRGBwPxAAd7xi2C-2rM"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Medora</span></div><div class="px-space-md py-space-sm"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-fixed text-on-primary-fixed font-label-lg rounded-xl shadow-[0_1px_4px_rgba(0,0,0,0.03)]"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="stuck-list" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">error_med</span><span class="font-label-lg text-label-lg">Stuck List</span></div><span class="px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">12</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="review-queue" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">mark_email_unread</span><span class="font-label-lg text-label-lg">Review Queue</span></div><span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">4</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm transition-all bg-primary-fixed text-on-primary-fixed font-label-lg rounded-xl shadow-[0_1px_4px_rgba(0,0,0,0.03)]" data-path="uploads" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">drive_folder_upload</span><span class="font-label-lg text-label-lg">Uploads</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="pathways" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">alt_route</span><span class="font-label-lg text-label-lg">Pathways</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="trust" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-label-lg text-label-lg">Trust</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="audit" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">history_edu</span><span class="font-label-lg text-label-lg">Audit</span></div></a></nav></div></div><div class="p-space-md flex flex-col gap-space-sm bg-surface-container"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container-lowest flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span><span class="font-label-sm text-label-sm text-on-surface-variant">0 unconfirmed merges</span></div><div class="px-space-sm text-on-surface-variant font-body-sm text-body-sm flex items-center gap-space-xs"><span class="h-2 w-2 rounded-full bg-secondary"></span><span>Operating normally</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg gap-space-md"><div class="flex items-center gap-space-md flex-1 min-w-0"><div class="flex items-center gap-space-xs truncate"><span class="material-symbols-outlined text-[18px] text-primary">local_hospital</span><span class="font-label-lg text-label-lg text-on-surface truncate">Kaveri Multispeciality Hospital</span><span class="text-outline-variant">•</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Oncology Care Unit</span></div><div class="hidden xl:flex items-center gap-space-xs"><span class="px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm">Synthetic data</span><span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Replay</span></div></div><div class="flex-1 max-w-md hidden md:flex items-center"><div class="w-full flex items-center bg-surface-container-lowest rounded-xl px-space-md py-space-xs shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-space-sm">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none" placeholder="Search patient by name, ID or phone..." type="text"/><kbd class="font-label-sm text-label-sm bg-surface-container px-space-xs py-0.5 rounded text-on-surface-variant ml-space-xs">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center bg-surface-container-lowest rounded-xl px-space-sm py-1.5"><span class="font-label-sm text-label-sm text-on-surface-variant mr-space-xs">Role:</span><select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer pr-space-xs"><option selected="">Meera (Care Coordinator)</option><option>Clinical Lead (Gastrosurgeon)</option><option>Nurse (Triage)</option><option>Hospital Admin</option></select></div><button aria-label="Notifications" class="relative p-space-xs rounded-full hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-on-surface-variant text-[22px]">notifications</span><span class="absolute top-1 right-1 h-2 w-2 rounded-full bg-primary ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACQGkGVE8D-O7FpvaZ4-S8OGRDmOGP9V1Ok9AsGxnQ9SVKUJj0Ocb--GHpWdLR1-xdgtu10cAWw2ShfXPlY40HlCmGqTref9rKTXApH7S6S7RVatsdAIpAz8yNHvbQyBRAsTPk9uINMCvENR9i1lSS5f9mNfsaMqWJETFv2zopV0c55fmnQ9bwF2F9jEjvO7HRvHVSdGTqLnkgL_7LnTVDdttwNI8L-yXFQf_CTZk8vDZ0-L38-HBn"/><div class="hidden sm:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-tight">Meera</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Care Coordinator</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-margin"><div class="flex flex-col w-full pb-space-xl">
+<!-- Header Block with Modern Clinical Elegance -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span>DATA PIPELINES</span>
+<span class="text-outline-variant">•</span>
+<span class="text-primary font-label-sm">LIVE STREAMING V3.2</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Uploads and Ingestion Jobs</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Drop what you already have. Medora extracts structured cancer pathway events without altering original records or interrupting clinical triage.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md">
+<span class="h-2 w-2 rounded-full bg-secondary animate-pulse"></span>
+<span>Worker Pool: 4/4 Active</span>
+</div>
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container-high transition-colors font-label-md text-label-md flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span>Ingestion Log</span>
+</button>
+</div>
+</div>
+<!-- Top Stat Strip (Bento-style 4-tile array) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Stat 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Rows Read Today</span>
+<div class="flex items-baseline gap-space-xs mt-0.5">
+<span class="font-display-lg text-display-lg text-on-surface tracking-tight" id="counter-rows">24,850</span>
+<span class="text-secondary font-label-sm text-label-sm flex items-center">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>+18%
+          </span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">table_rows</span>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Files Processed</span>
+<div class="flex items-baseline gap-space-xs mt-0.5">
+<span class="font-display-lg text-display-lg text-on-surface tracking-tight">18</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">of 22 queued</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">folder_data</span>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Human Review Needed</span>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-display-lg text-display-lg text-on-surface tracking-tight">4</span>
+<span class="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">Flagged</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-full bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">person_alert</span>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Cryptographic Log</span>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-headline-md text-headline-md text-secondary tracking-tight">100% Valid</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+</div>
+</div>
+<!-- Primary Drag & Drop Zone -->
+<div class="relative group cursor-pointer rounded-xl bg-surface-container-low transition-all duration-300 p-space-lg sm:p-space-xl flex flex-col items-center justify-center text-center shadow-sm hover:shadow-md mb-space-xl overflow-hidden" id="drop-zone">
+<!-- Ambient subtle background decorative ring -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none transition-all group-hover:scale-125"></div>
+<div class="absolute -left-20 -top-20 w-80 h-80 rounded-full bg-secondary/5 blur-3xl pointer-events-none"></div>
+<input accept=".xlsx,.xls,.csv,.pdf,.zip,image/*" class="hidden" id="file-input" multiple="" type="file"/>
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest text-primary shadow-sm flex items-center justify-center mb-space-md group-hover:scale-110 group-hover:bg-primary-fixed group-hover:text-on-primary-fixed transition-transform duration-300">
+<span class="material-symbols-outlined text-[32px]">cloud_upload</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-space-xs tracking-tight">
+      Drop what you already have.
+    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mb-space-md leading-relaxed">
+      Supports Excel (.xlsx, .xls), CSV rosters, Hospital EMR dumps, PDF tumor board summaries, and photographed histology sheets up to 500MB each.
+    </p>
+<div class="flex flex-wrap items-center justify-center gap-space-sm mb-space-md">
+<button class="px-space-lg py-space-sm rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg shadow-sm transition-colors flex items-center gap-space-xs" onclick="document.getElementById('file-input').click();">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Browse Files</span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg shadow-sm transition-colors flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">share_location</span>
+<span>Paste Clinical API / PACS Link</span>
+</button>
+</div>
+<!-- Assurance pill footer -->
+<div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">encrypted</span>
+<span>Zero data leakage: PHI scrubbed client-side before ingestion hash. Local hospital isolation active.</span>
+</div>
+</div>
+<!-- Active Jobs Container Header -->
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Active Pipeline & Recent Ingestions</h3>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">4 in list</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm px-space-xs py-1 rounded">Clear finished (1)</button>
+<span class="text-outline-variant">•</span>
+<button class="text-primary hover:underline font-label-sm text-label-sm px-space-xs py-1">Pause all pipelines</button>
+</div>
+</div>
+<!-- Ingestion Jobs Stream List -->
+<div class="flex flex-col gap-space-md">
+<!-- JOB 1: Active running with live shimmer progress -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md relative overflow-hidden transition-all hover:shadow-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">table_chart</span>
+</div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold tracking-tight">Tumour_Board_Minutes_Sept_Oct_2024.xlsx</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(18.4 MB)</span>
+<span class="px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm flex items-center gap-1 font-medium">
+<span class="h-1.5 w-1.5 rounded-full bg-tertiary animate-ping"></span>
+<span>Reading & Entity Mapping</span>
+</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Target Pathway: Colorectal & HPB Oncology Multidisciplinary Consensus
+            </span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 self-end lg:self-center">
+<button class="px-space-sm py-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">pause</span>
+<span>Pause</span>
+</button>
+<button class="px-space-sm py-space-xs rounded-lg bg-surface-container-low hover:bg-error-container hover:text-on-error-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>Cancel</span>
+</button>
+</div>
+</div>
+<!-- Animated Progress Bar -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="font-semibold text-on-surface">1,420</span> of 2,088 rows resolved
+            <span class="text-outline-variant">•</span>
+<span class="px-space-xs py-0.2 rounded bg-tertiary-fixed/60 text-on-tertiary-fixed-variant font-medium">3 sent to review queue</span>
+</div>
+<div class="flex items-center gap-space-xs font-semibold text-primary">
+<span>68%</span>
+<span class="text-on-surface-variant font-normal">~45s remaining</span>
+</div>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container overflow-hidden relative">
+<div class="h-full bg-primary rounded-full transition-all duration-500 ease-out relative" style="width: 68%;">
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-[shimmer_2s_infinite]"></div>
+</div>
+</div>
+</div>
+<!-- Micro Pipeline Stage Indicators -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-space-xs font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs text-secondary font-medium">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>1. Format Parsed</span>
+</div>
+<div class="flex items-center gap-space-xs text-primary font-semibold">
+<span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+<span>2. Entity Mapping</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant opacity-60">
+<span class="h-2 w-2 rounded-full bg-outline-variant"></span>
+<span>3. Clinical Validation</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant opacity-60">
+<span class="h-2 w-2 rounded-full bg-outline-variant"></span>
+<span>4. Database Commit</span>
+</div>
+</div>
+</div>
+<!-- JOB 2: Resumed state banner (Fault tolerant worker) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md transition-all hover:shadow-md">
+<!-- Recovery Alert Banner -->
+<div class="px-space-md py-space-xs rounded-lg bg-secondary-container/60 text-on-secondary-fixed flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">sync_saved_locally</span>
+<span class="font-semibold">Resilience Triggered:</span>
+<span>Worker node migrated seamlessly at chunk #712. 0 rows lost.</span>
+</div>
+<span class="font-mono text-label-sm opacity-80">WAL-SYNCED #8920</span>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">view_list</span>
+</div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold tracking-tight">Daycare_Chemo_Attendance_Register_Q3.csv</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(42.1 MB)</span>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-medium">
+                Checking & Pathway Validation
+              </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Protocol: Chemotherapy Cycle Dates & Regimen Adherence Linker
+            </span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 self-end lg:self-center">
+<button class="px-space-sm py-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">pause</span>
+<span>Pause</span>
+</button>
+<button class="px-space-sm py-space-xs rounded-lg bg-surface-container-low hover:bg-error-container hover:text-on-error-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>Cancel</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="font-semibold text-on-surface">8,920</span> of 10,022 records
+            <span class="text-outline-variant">•</span>
+<span class="px-space-xs py-0.2 rounded bg-secondary-container text-on-secondary-container">1 item sent to review</span>
+</div>
+<span class="font-semibold text-secondary">89%</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full transition-all duration-300" style="width: 89%;"></div>
+</div>
+</div>
+</div>
+<!-- JOB 3: Completed state with Left-to-Right Stages & Action -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md transition-all hover:shadow-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold tracking-tight">Radiation_Oncology_Referrals_Oct.pdf</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(6.2 MB)</span>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+<span>Completed & Loaded</span>
+</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              OCR Engine: Indian Medical Acronyms & Radiotherapy Dosage Matrix
+            </span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 self-end lg:self-center">
+<button class="px-space-md py-space-xs rounded-lg bg-primary-fixed text-on-primary-fixed hover:bg-primary hover:text-on-primary font-label-md text-label-md transition-colors flex items-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View 512 Extracted Rows</span>
+</button>
+</div>
+</div>
+<!-- Pipeline Sequential Flow Badges -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs border-t border-surface-container-high/40">
+<div class="flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-secondary">check</span>
+<span>1. Ingestion (PDF)</span>
+</div>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">arrow_forward</span>
+<div class="flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-secondary">check</span>
+<span>2. OCR Extracted</span>
+</div>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">arrow_forward</span>
+<div class="flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-secondary">check</span>
+<span>3. ICD-O-3 & TNM Mapped</span>
+</div>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">arrow_forward</span>
+<div class="flex items-center gap-1 px-space-sm py-1 rounded bg-secondary-container font-label-sm text-label-sm text-on-secondary-container font-semibold">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+<span>4. 512 Patient Nodes Created</span>
+</div>
+<span class="ml-auto font-label-sm text-label-sm text-on-surface-variant">Finished 12 minutes ago</span>
+</div>
+</div>
+<!-- JOB 4: Failed Chunk with Non-Alarmist Graceful Recovery -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md transition-all hover:shadow-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">folder_zip</span>
+</div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold tracking-tight">Pathology_Biopsy_Scans_Batch_12.zip</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(84.0 MB)</span>
+<span class="px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">report</span>
+<span>Paused on Chunk (Page 44 OCR timeout)</span>
+</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Reason: Low-contrast phone photo of immunohistochemistry stamp exceeded 15s optical scan budget.
+            </span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs shrink-0 self-end lg:self-center">
+<button class="px-space-md py-space-xs rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span>Retry Chunk</span>
+</button>
+<button class="px-space-sm py-space-xs rounded-lg bg-surface-container-high hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span>Skip Page 44</span>
+</button>
+<button class="px-space-sm py-space-xs rounded-lg bg-surface-container-high hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>Error Details</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">43 / 102 document images processed</span>
+<span class="font-semibold text-error">42% Paused</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-error rounded-full opacity-80" style="width: 42%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Human Governance & Helper Banner -->
+<div class="mt-space-xl p-space-lg rounded-xl bg-surface-container-low flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">psychology_alt</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold">Handling custom or non-standard hospital sheets?</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Medora memorizes custom column headers and local physician shorthand. You can adjust and confirm mappings once in <a class="text-primary underline font-medium" href="#">Mapping Confirm</a> without IT intervention.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md shadow-sm transition-colors flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span>Standard Excel Template</span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md shadow-sm transition-colors flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">help_outline</span>
+<span>Format Guide</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const dropZone = document.getElementById('drop-zone');
+    const fileInput = document.getElementById('file-input');
+
+    if (dropZone && fileInput) {
+      ['dragenter', 'dragover'].forEach(eventName => {
+        dropZone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          dropZone.classList.add('bg-primary-fixed/20');
+        }, false);
+      });
+
+      ['dragleave', 'drop'].forEach(eventName => {
+        dropZone.addEventListener(eventName, (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          dropZone.classList.remove('bg-primary-fixed/20');
+        }, false);
+      });
+
+      dropZone.addEventListener('drop', (e) => {
+        const dt = e.dataTransfer;
+        const files = dt.files;
+        if (files && files.length > 0) {
+          alert('Received ' + files.length + ' files. Initiating client-side hash and ingestion sequence...');
+        }
+      });
+    }
+  })();
+</script></main></div></body></html>

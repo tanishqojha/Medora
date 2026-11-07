@@ -1,0 +1,27 @@
+# TWO-KEY FILE. Needs a clinician sign-off record in the database before it can be activated.
+# All gap values are PROPOSED placeholders from PRD section 9. The Clinical Lead sets the real values.
+pathway: gi_cancer_handover
+name: GI cancer, tumour board decision to first treatment
+version: 1
+proposed: true
+signed_by: null
+signed_at: null
+steps:
+  - id: tumour_board_decision
+    label: Tumour board decision
+    event_type: tb_decision_recorded
+  - id: treatment_booked
+    label: treatment booking
+    event_type: appointment_booked
+    max_gap_days_from: tumour_board_decision
+    max_gap_days: 7        # proposed
+  - id: treatment_attended
+    label: treatment visit
+    event_type: appointment_attended
+    max_gap_days_from: treatment_booked
+    max_gap_days: 14       # proposed
+obligations:
+  - when: tumour_board_decision
+    expects: treatment_booked
+    flag_if_missing_after_days: 7   # proposed
+unreachable_after_attempts: 3       # proposed

@@ -1,0 +1,11 @@
+{
+  "columns": {"Sr No": "ignore", "Patient Name": "patient_name", "Age": "age", "Sex": "sex", "Mobile No": "phone",
+              "UHID": "hospital_number", "Date": "event_date", "Department": "department", "Visit Type": "event_type",
+              "Status": "status", "Next Appt Date": "appointment_date", "Diagnosis": "ignore"},
+  "event_type_values": {"Tumour Board": "tb_decision_recorded", "Chemo booking": "appointment_booked",
+                        "Chemo Day Care": null, "Surgery": "surgery_recorded"},
+  "status_values": {"Booked": "appointment_booked", "Attended": "appointment_attended", "DNA": "appointment_missed",
+                    "Done": "surgery_recorded"},
+  "default_event_type": null,
+  "date_convention": "dmy"
+}

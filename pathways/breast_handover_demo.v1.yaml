@@ -1,0 +1,24 @@
+# DEMO ONLY. Unsigned. Used in demo beat 5 to show a new pathway is config, not code.
+# It can be previewed but never activated until a clinician signs it. Values are proposed placeholders.
+pathway: breast_handover_demo
+name: Breast cancer, surgery to oncology handover (demo)
+version: 1
+demo: true
+proposed: true
+signed_by: null
+signed_at: null
+steps:
+  - id: surgery_done
+    label: Surgery
+    event_type: surgery_recorded
+  - id: oncology_booked
+    label: oncology booking
+    event_type: appointment_booked
+    max_gap_days_from: surgery_done
+    max_gap_days: 14       # proposed
+  - id: oncology_attended
+    label: oncology visit
+    event_type: appointment_attended
+    max_gap_days_from: oncology_booked
+    max_gap_days: 14       # proposed
+unreachable_after_attempts: 3   # proposed

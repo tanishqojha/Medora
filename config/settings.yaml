@@ -1,0 +1,24 @@
+# Medora runtime settings. Anything marked proposed is a placeholder picked before real data.
+# Tune after the first baseline run. Clinical values come from the Clinical Lead, not from here.
+ingest:
+  chunk_rows: {value: 5000, proposed: true}
+  max_upload_mb: {value: 200, proposed: true}
+  max_pdf_pages: {value: 200, proposed: true}
+mapping:
+  sample_rows: {value: 5, proposed: true}       # N masked rows the LLM may see (F3)
+messy:
+  ocr_min_confidence: {value: 0.85, proposed: true}
+  field_min_confidence: {value: 0.90, proposed: true}
+identity:
+  auto_merge_min_score: {value: 0.85, proposed: true}   # needs phone + name + hospital number in practice
+  review_min_score: {value: 0.60, proposed: true}
+callassist:
+  reason_min_confidence: {value: 0.75, proposed: true}
+  audio_retention_hours: {value: 0, proposed: true, pending: clinical_lead}  # 0 = delete right after transcription
+review:
+  escalate_after_hours: {value: 24, proposed: true}   # timeout escalates, never auto-approves
+llm:
+  temperature: 0
+  timeout_seconds: 45
+eval:
+  tolerance: {value: 0.005, proposed: true}  # allowed drop before CI fails

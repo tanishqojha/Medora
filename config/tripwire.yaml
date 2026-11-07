@@ -1,0 +1,55 @@
+# TWO-KEY FILE (Rules 3). Symptom router config.
+# STATUS: DRAFT written by Claude Code, NOT approved. The Clinical Lead must review and sign every list.
+# Recall over precision: any match, any near match, or any doubt routes to a person. The router never
+# decides what a symptom means. Negation is ignored on purpose ("no fever" still routes).
+status: draft
+approved_by: null
+approved_at: null
+
+# Category -> route. Every category routes to a person.
+routes:
+  symptom: nurse
+  distress: nurse
+  stop_treatment: clinician
+  medical_question: clinician
+
+# Words and phrases per category. Matching is case-insensitive on normalised text, with typo tolerance.
+keywords:
+  symptom:
+    en: [pain, ache, hurts, hurting, fever, temperature, vomit, vomiting, nausea, bleeding, blood, breathless,
+         breathing, cough, swelling, swollen, rash, diarrhoea, diarrhea, loose motion, constipation, dizzy,
+         faint, fainted, weak, weakness, tired all the time, not eating, cannot eat, can't eat, weight loss,
+         jaundice, yellow, lump, wound, pus, infection, headache, chest, stomach, sick, unwell, burning,
+         seizure, fits, unconscious, black stool, urine]
+    hi_latn: [dard, bukhar, bukhaar, ulti, khoon, saans, khansi, sujan, soojan, chakkar, kamzori, kamjori,
+              dast, pet dard, bhook nahi, jalan, peeliya, ghaav, ghav, behosh, tabiyat kharab, tabiyat theek nahi]
+    hi_deva: [दर्द, बुखार, उल्टी, खून, सांस, साँस, खांसी, सूजन, चक्कर, कमजोरी, कमज़ोरी, दस्त, पेट, भूख नहीं, जलन,
+              पीलिया, घाव, बेहोश, तबियत, तबीयत, बीमार]
+  distress:
+    en: [scared, afraid, crying, cannot cope, can't cope, hopeless, want to die, kill myself, end my life,
+         no point, depressed, alone]
+    hi_latn: [darr, dar lag, ro rahi, ro raha, mar jaana, marna chahti, marna chahta, jeena nahi]
+    hi_deva: [डर, रो रही, रो रहा, मर जाना, मरना, जीना नहीं]
+  stop_treatment:
+    en: [stop treatment, stop chemo, stopping chemo, don't want treatment, do not want treatment, no more chemo,
+         quit treatment, leave treatment, alternative medicine, ayurveda instead, homeopathy instead]
+    hi_latn: [ilaaj band, ilaj band, chemo nahi, chemo band, ilaaj nahi karana, ilaj nahi karwana]
+    hi_deva: [इलाज बंद, कीमो नहीं, कीमो बंद, इलाज नहीं]
+  medical_question:
+    en: [should i take, which medicine, what medicine, dose, dosage, is it cancer, what stage, is it serious,
+         will i be cured, how long do i have, side effect, can i eat, should i stop, tablet, medicine, report says,
+         what does my report, treatment advice, which treatment, better treatment, what treatment, best treatment,
+         treatment for, treatment is best, chemo or, surgery or]
+    hi_latn: [kaunsi dawai, kaun si dawai, dawai, dawa, goli, kya khaun, report mein kya, theek ho jaungi,
+              theek ho jaunga]
+    hi_deva: [कौन सी दवा, दवा, दवाई, गोली, रिपोर्ट, ठीक हो जाऊंगी, ठीक हो जाऊंगा]
+
+# Doubt signals: body or medical words that are not in the lists above still route (recall bias).
+doubt_markers:
+  en: [doctor, hospital admitted, admitted, emergency, casualty, ambulance, pain killer, painkiller, injection,
+       drip, scan result, biopsy result, operation site]
+  hi_latn: [doctor sahab, bharti, emergency, injection]
+  hi_deva: [डॉक्टर, भर्ती, इमरजेंसी, इंजेक्शन]
+
+# Plain refusal for medical questions (Rules 1.5). Draft copy, needs approval.
+refusal_text: "I can't give medical advice. I have sent your question to the clinical team. A nurse or doctor will call you back."

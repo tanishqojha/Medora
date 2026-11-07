@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary":"#ffffff","primary-container":"#b45b43","on-primary-fixed":"#3c0800","surface-container":"#efeded","on-error":"#ffffff","on-tertiary-fixed":"#291800","surface-tint":"#98462f","secondary-fixed":"#ccead2","tertiary-fixed-dim":"#f9bb63","on-primary-container":"#fffbff","on-tertiary-container":"#fffbff","primary-fixed":"#ffdbd1","secondary":"#4a6452","on-surface":"#1b1c1c","surface-container-high":"#e9e8e7","inverse-on-surface":"#f2f0f0","surface-bright":"#faf9f8","outline-variant":"#dbc1ba","secondary-fixed-dim":"#b0ceb7","surface-dim":"#dbdad9","surface-container-low":"#f5f3f3","on-secondary":"#ffffff","tertiary-container":"#9c6b18","surface-container-highest":"#e3e2e2","on-primary":"#ffffff","outline":"#88726d","surface":"#faf9f8","background":"#faf9f8","tertiary":"#7f5300","error":"#ba1a1a","tertiary-fixed":"#ffddb3","on-tertiary-fixed-variant":"#633f00","primary-fixed-dim":"#ffb4a1","on-surface-variant":"#55433e","inverse-primary":"#ffb4a1","primary":"#95432d","on-error-container":"#93000a","surface-variant":"#e3e2e2","on-primary-fixed-variant":"#7a2f1b","secondary-container":"#c9e7cf","inverse-surface":"#303030","on-background":"#1b1c1c","on-secondary-container":"#4e6956","error-container":"#ffdad6","on-secondary-fixed":"#062012","surface-container-lowest":"#ffffff","on-secondary-fixed-variant":"#334c3b"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-mobile":"1rem","gutter-mobile":"0.75rem","space-xl":"2.25rem","space-md":"1rem","margin":"1.75rem","space-xs":"0.25rem","space-sm":"0.5rem","space-lg":"1.5rem","gutter":"1.25rem"},"fontFamily":{"headline-lg":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-lg":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"],"body-sm":["Inter"],"label-lg":["Inter"],"label-md":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"]},"fontSize":{"headline-lg":["28px",{"lineHeight":"36px","fontWeight":"600"}],"display-lg":["36px",{"lineHeight":"44px","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"28px","fontWeight":"600"}],"headline-lg-mobile":["22px",{"lineHeight":"30px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"500"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-lg-mobile":["28px",{"lineHeight":"36px","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><img alt="Medora Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XKo2fE7SWr1QTk81a5eFjkBmOLQUoslwgLKZGhp_Oo6AUu0TUg33B3B0tGNhyVE8GC-ZKargPD-sMd5rpUqH4Mwf4xNywxgGBEDSh9y_FiiuOMzWGFlxnrDCOK6K51d73HINB5IWsf3SEVh5kFsdwfNJgPePSXyD1mzE0uBHF0r4xc4io0lEykkX5Pqez3VA7pggkqI787zumqCXmD_LdpHdkijizSISh8-5HJnRGBwPxAAd7xi2C-2rM"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Medora</span></div><div class="px-space-md py-space-sm"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-fixed text-on-primary-fixed font-label-lg rounded-xl shadow-[0_1px_4px_rgba(0,0,0,0.03)]"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="stuck-list" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">error_med</span><span class="font-label-lg text-label-lg">Stuck List</span></div><span class="px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">12</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm transition-all bg-primary-fixed text-on-primary-fixed font-label-lg rounded-xl shadow-[0_1px_4px_rgba(0,0,0,0.03)]" data-path="review-queue" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">mark_email_unread</span><span class="font-label-lg text-label-lg">Review Queue</span></div><span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">4</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="uploads" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">drive_folder_upload</span><span class="font-label-lg text-label-lg">Uploads</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="pathways" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">alt_route</span><span class="font-label-lg text-label-lg">Pathways</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="trust" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-label-lg text-label-lg">Trust</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="audit" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">history_edu</span><span class="font-label-lg text-label-lg">Audit</span></div></a></nav></div></div><div class="p-space-md flex flex-col gap-space-sm bg-surface-container"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container-lowest flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span><span class="font-label-sm text-label-sm text-on-surface-variant">0 unconfirmed merges</span></div><div class="px-space-sm text-on-surface-variant font-body-sm text-body-sm flex items-center gap-space-xs"><span class="h-2 w-2 rounded-full bg-secondary"></span><span>Operating normally</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg gap-space-md"><div class="flex items-center gap-space-md flex-1 min-w-0"><div class="flex items-center gap-space-xs truncate"><span class="material-symbols-outlined text-[18px] text-primary">local_hospital</span><span class="font-label-lg text-label-lg text-on-surface truncate">Kaveri Multispeciality Hospital</span><span class="text-outline-variant">•</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Oncology Care Unit</span></div><div class="hidden xl:flex items-center gap-space-xs"><span class="px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm">Synthetic data</span><span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Replay</span></div></div><div class="flex-1 max-w-md hidden md:flex items-center"><div class="w-full flex items-center bg-surface-container-lowest rounded-xl px-space-md py-space-xs shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-space-sm">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none" placeholder="Search patient by name, ID or phone..." type="text"/><kbd class="font-label-sm text-label-sm bg-surface-container px-space-xs py-0.5 rounded text-on-surface-variant ml-space-xs">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center bg-surface-container-lowest rounded-xl px-space-sm py-1.5"><span class="font-label-sm text-label-sm text-on-surface-variant mr-space-xs">Role:</span><select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer pr-space-xs"><option selected="">Meera (Care Coordinator)</option><option>Clinical Lead (Gastrosurgeon)</option><option>Nurse (Triage)</option><option>Hospital Admin</option></select></div><button aria-label="Notifications" class="relative p-space-xs rounded-full hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-on-surface-variant text-[22px]">notifications</span><span class="absolute top-1 right-1 h-2 w-2 rounded-full bg-primary ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACQGkGVE8D-O7FpvaZ4-S8OGRDmOGP9V1Ok9AsGxnQ9SVKUJj0Ocb--GHpWdLR1-xdgtu10cAWw2ShfXPlY40HlCmGqTref9rKTXApH7S6S7RVatsdAIpAz8yNHvbQyBRAsTPk9uINMCvENR9i1lSS5f9mNfsaMqWJETFv2zopV0c55fmnQ9bwF2F9jEjvO7HRvHVSdGTqLnkgL_7LnTVDdttwNI8L-yXFQf_CTZk8vDZ0-L38-HBn"/><div class="hidden sm:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-tight">Meera</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Care Coordinator</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-margin"><div class="flex flex-col w-full">
+<!-- Interactive View State Logic (pure inline vanilla script) -->
+<script>
+    function triggerReplayCheck() {
+      const btn = document.getElementById('replay-btn');
+      const spinner = document.getElementById('replay-spinner');
+      const badge = document.getElementById('replay-badge');
+      const auditLog = document.getElementById('replay-timestamp');
+      
+      btn.classList.add('opacity-70', 'pointer-events-none');
+      spinner.classList.remove('hidden');
+      
+      setTimeout(() => {
+        spinner.classList.add('hidden');
+        btn.classList.remove('opacity-70', 'pointer-events-none');
+        badge.classList.remove('opacity-0', 'translate-y-1');
+        badge.classList.add('opacity-100', 'translate-y-0');
+        const now = new Date();
+        auditLog.innerText = 'Replay verified at ' + now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit', second:'2-digit'}) + ' • deterministic check passed (0 drift)';
+      }, 750);
+    }
+
+    function toggleCropModal(cropId, title, snippetText) {
+      const modal = document.getElementById('crop-modal');
+      const modalTitle = document.getElementById('crop-title');
+      const modalSnippet = document.getElementById('crop-snippet');
+      
+      if (modal.classList.contains('hidden')) {
+        modalTitle.innerText = title;
+        modalSnippet.innerText = snippetText;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      } else {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+  </script>
+<!-- Patient Overview Bar / Clinical Banner -->
+<div class="relative bg-surface-container-lowest rounded-2xl p-space-lg mb-space-lg shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<!-- Patient Identity & Clinical Pathway -->
+<div class="flex items-start gap-space-md">
+<div class="relative w-16 h-16 rounded-2xl bg-primary-fixed flex items-center justify-center shrink-0 shadow-sm overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Warm natural portrait of Rajesh Kumar, a 54-year-old Indian male patient with kind expression, soft warm clinical lighting, natural depth, terracotta and beige undertones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe5OmTaEXa1T_Ush7Nx3QMEWXCQhB5802JnJvlyrYH8mGjnelauYh1FfBQAQJccILkvfBRTWr27XTEXFFmVHFutJHVktPlPEIjhMFSPRs9JhxHM3spZnlMOoLspuXm4ZoYB3tSrayLlzNjjlSAD_CWmIoDcKmm23YT94ewvpuuY8tRy9ToUraP8P1dmmRWNjTaTs9Lo67DUy72977n_-3JuFj9Hh50dCGxt2Us2-rdUM-SbGToyyf5"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-error rounded-full ring-2 ring-surface-container-lowest" title="Action Overdue"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex flex-wrap items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Rajesh Kumar</h1>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md">54M • PT-88204</span>
+<div class="flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">timer_off</span>
+<span>Action Overdue (9 days)</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm">Synthetic Care Record</span>
+</div>
+<div class="flex flex-wrap items-center gap-y-1 gap-x-space-md mt-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">call</span>
+<span class="font-label-md text-label-md text-on-surface">+91 98201 44521</span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">support_agent</span>
+<span>Care Coordinator: <strong class="text-on-surface font-label-md text-label-md">Meera</strong></span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">alt_route</span>
+<span>Pathway: <span class="text-on-surface font-label-md text-label-md">GI / Colorectal Protocol</span> <span class="text-outline text-label-sm font-label-sm">(v1.4 • signed by Dr. V. Menon)</span></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Action Controls -->
+<div class="flex flex-wrap items-center gap-space-sm self-start lg:self-center shrink-0">
+<button class="flex items-center gap-space-xs px-space-lg py-2.5 rounded-xl bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg transition-all shadow-sm active:scale-95" onclick="alert('Initiating outbound call to Rajesh Kumar (+91 98201 44521)...')">
+<span class="material-symbols-outlined text-[18px]">phone_in_talk</span>
+<span>Call Rajesh Kumar</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors active:scale-95" onclick="alert('Opening clinical call memo modal...')">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">edit_note</span>
+<span>Record Call Memo</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-lg text-label-lg transition-colors" onclick="alert('Opening reassignment and clinician deferral panel...')">
+<span class="material-symbols-outlined text-[18px]">rule_folder</span>
+<span>Reassign / Defer</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Obligation Banner Strip (Top of Timeline & Diagnostics) -->
+<div class="relative bg-surface-container-lowest rounded-2xl p-space-lg mb-space-xl shadow-sm overflow-hidden">
+<!-- Subtle warm urgency indicator gradient -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-error"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-error-container text-on-error-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]">assignment_late</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-error">Active Flagged Obligation</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-md text-label-md text-on-surface">Target Step: <strong class="font-headline-sm text-headline-sm">Medical Oncology OPD Visit</strong> (Post-Tumour Board Chemotherapy Initiation)</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+            Resolution Criteria: Closes automatically when a Medical Oncology chemotherapy consult or IPD Day Care chemotherapy infusion admission is logged in hospital EMR.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-lg self-end md:self-center shrink-0 pl-space-md bg-surface-container-low py-2 px-space-md rounded-xl">
+<div class="text-right">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Protocol Due Date</div>
+<div class="font-headline-sm text-headline-sm text-error">05 Oct 2024</div>
+</div>
+<div class="h-8 w-px bg-outline-variant"></div>
+<div class="text-left">
+<div class="font-label-sm text-label-sm text-error font-medium">Overdue By</div>
+<div class="font-headline-sm text-headline-sm text-error">9 Days</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Asymmetric 12-Column Grid (Timeline: 7 cols, Evidence/Drawer: 5 cols) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- LEFT COLUMN: Vertical Audit Trail Timeline (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Section Header -->
+<div class="flex items-center justify-between px-space-xs mb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">timeline</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Care Pathway Timeline</h2>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span>Deterministic Audit Trail (6 events)</span>
+</div>
+</div>
+<!-- Timeline Container -->
+<div class="relative bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm">
+<!-- Connecting Vertical Axis -->
+<div class="absolute left-10 top-10 bottom-12 w-0.5 bg-surface-container-high"></div>
+<div class="space-y-space-xl relative">
+<!-- EVENT 1: Biopsy Histopathology -->
+<div class="relative flex items-start gap-space-lg group">
+<div class="relative z-10 w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0 shadow-sm mt-1 ring-4 ring-surface-container-lowest">
+<span class="material-symbols-outlined text-[18px]">biotech</span>
+</div>
+<div class="flex-1 bg-surface-container-low/60 hover:bg-surface-container-low transition-colors rounded-xl p-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-1">
+<span class="font-label-md text-label-md text-primary">18 Sep 2024 • 11:30 AM</span>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified</span> 99.8% Parsed
+                  </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pathology Lab</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Biopsy Confirmed Adenocarcinoma</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Moderately differentiated adenocarcinoma of the sigmoid colon. Margins clear; KRAS/NRAS wild type confirmed.
+              </p>
+<div class="mt-space-sm flex items-center gap-space-sm flex-wrap">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high font-label-sm text-label-sm text-on-surface transition-colors" onclick="toggleCropModal('crop-1', 'Histopathology Lab Report #HP-4412', 'Specimen: Sigmoid colon biopsy. Microscopic exam indicates moderately differentiated invasive adenocarcinoma. Synoptic reporting fields extracted without discrepancy.')">
+<span class="material-symbols-outlined text-[14px] text-primary">description</span>
+<span>Source: Lab Report #HP-4412 [View Crop]</span>
+</button>
+<span class="font-label-sm text-label-sm text-outline">Verified by Dr. R. Sen (Senior Histopathologist)</span>
+</div>
+</div>
+</div>
+<!-- EVENT 2: Tumour Board Consensus -->
+<div class="relative flex items-start gap-space-lg group">
+<div class="relative z-10 w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0 shadow-sm mt-1 ring-4 ring-surface-container-lowest">
+<span class="material-symbols-outlined text-[18px]">groups</span>
+</div>
+<div class="flex-1 bg-surface-container-low/60 hover:bg-surface-container-low transition-colors rounded-xl p-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-1">
+<span class="font-label-md text-label-md text-primary">24 Sep 2024 • 04:15 PM</span>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">done_all</span> Board Quorum Met
+                  </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">GI Multidisciplinary Board</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Multidisciplinary Tumour Board Consensus</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Recommended 6 cycles of Adjuvant FOLFOX chemotherapy followed by reassessment. Dr. Menon signed surgical clearance.
+              </p>
+<div class="mt-space-sm flex items-center gap-space-sm flex-wrap">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high font-label-sm text-label-sm text-on-surface transition-colors" onclick="toggleCropModal('crop-2', 'Tumour Board Minutes - 24 Sep (Page 4)', 'Decision Consensus: Stage IIIb Colorectal Adenocarcinoma. Planned regimen: FOLFOX 6 cycles. Patient to consult Dr. Sunita Rao (Medical Oncology) post-resection daycare discharge within 10 days.')">
+<span class="material-symbols-outlined text-[14px] text-primary">quick_reference</span>
+<span>Source: Tumour Board Minutes pg 4 [View Crop]</span>
+</button>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Verified by Dr. Vinod Menon
+                </span>
+</div>
+</div>
+</div>
+<!-- EVENT 3: Discharge from GI Surgery -->
+<div class="relative flex items-start gap-space-lg group">
+<div class="relative z-10 w-8 h-8 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center shrink-0 shadow-sm mt-1 ring-4 ring-surface-container-lowest">
+<span class="material-symbols-outlined text-[18px]">meeting_room</span>
+</div>
+<div class="flex-1 bg-surface-container-low/60 hover:bg-surface-container-low transition-colors rounded-xl p-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-1">
+<span class="font-label-md text-label-md text-primary">26 Sep 2024 • 10:00 AM</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Surgical Daycare Unit</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Discharge from GI Surgery Daycare</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Wound healed satisfactorily. Discharge summary formally instructs patient to report to Medical Oncology OPD within 10 days for port placement and chemotherapy scheduling.
+              </p>
+<div class="mt-space-sm flex items-center gap-space-sm flex-wrap">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high font-label-sm text-label-sm text-on-surface transition-colors" onclick="toggleCropModal('crop-3', 'Discharge Summary #DS-892 (Page 2)', 'Follow-up Instructions: Suture removal done. Patient advised to book Medical Oncology consultation before 05/10/2024 for baseline cardiac workup and FOLFOX chemo planning.')">
+<span class="material-symbols-outlined text-[14px] text-primary">description</span>
+<span>Source: Discharge Summary p.2 [View Crop]</span>
+</button>
+<span class="font-label-sm text-label-sm text-outline">EMR Discharge Stamp ID: #DIS-00389</span>
+</div>
+</div>
+</div>
+<!-- EVENT 4: Protocol Window Closed (Breach Point) -->
+<div class="relative flex items-start gap-space-lg group">
+<div class="relative z-10 w-8 h-8 rounded-full bg-error-container text-on-error-container flex items-center justify-center shrink-0 shadow-sm mt-1 ring-4 ring-surface-container-lowest">
+<span class="material-symbols-outlined text-[18px]">alarm_off</span>
+</div>
+<div class="flex-1 bg-error-container/20 rounded-xl p-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-1">
+<span class="font-label-md text-label-md text-error font-medium">05 Oct 2024 • 11:59 PM</span>
+<span class="px-space-sm py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm">Window Exceeded</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Protocol Window Closed (10-Day Grace Limit)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                No Medical Oncology appointment, phone consultation, or daycare registration was logged in the hospital core EMR within 10 calendar days of surgical discharge. Automated pathway listener flagged case for care coordinator intervention.
+              </p>
+</div>
+</div>
+<!-- EVENT 5: Phone Call Attempt 1 -->
+<div class="relative flex items-start gap-space-lg group">
+<div class="relative z-10 w-8 h-8 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant flex items-center justify-center shrink-0 shadow-sm mt-1 ring-4 ring-surface-container-lowest">
+<span class="material-symbols-outlined text-[18px]">phone_missed</span>
+</div>
+<div class="flex-1 bg-surface-container-low/60 hover:bg-surface-container-low transition-colors rounded-xl p-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-1">
+<span class="font-label-md text-label-md text-primary">08 Oct 2024 • 04:15 PM</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Outbound Call • Duration: 0m 42s</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Call Attempt 1 (Care Coordinator Meera)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Dialed primary mobile number (+91 98201 44521). Result: No answer / Ringing out. Automated SMS reminder sent with Medora patient clinic direct line.
+              </p>
+<div class="mt-space-sm flex items-center gap-space-sm flex-wrap">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high font-label-sm text-label-sm text-on-surface transition-colors" onclick="toggleCropModal('crop-4', 'Hospital Telephony Exchange Log #TEL-908', 'Call ID: TEL-908 | Dialed: +91 98201 44521 | Extension: 412 (Meera CC) | Ring Time: 42s | Outcome: Unanswered | Provider: Tata Teleservices Clinical PRI Gate.')">
+<span class="material-symbols-outlined text-[14px] text-primary">call_log</span>
+<span>Source: Telephony Log #TEL-908</span>
+</button>
+<span class="font-label-sm text-label-sm text-outline">Logged by Meera</span>
+</div>
+</div>
+</div>
+<!-- EVENT 6: Current State (Now) -->
+<div class="relative flex items-start gap-space-lg group">
+<div class="relative z-10 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm mt-1 ring-4 ring-surface-container-lowest animate-pulse">
+<span class="material-symbols-outlined text-[18px]">priority_high</span>
+</div>
+<div class="flex-1 bg-primary-fixed/25 rounded-xl p-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-1">
+<span class="font-label-md text-label-md text-primary font-medium">14 Oct 2024 • Present Day</span>
+<span class="px-space-sm py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">notification_important</span> Flag Active
+                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Flag Active: 9 Days Beyond Protocol Window</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Patient is currently 19 days post-discharge without chemotherapy initiation or booked consultation. Secondary contact (Spouse - Sunita Kumar, +91 98201 44528) available for escalation.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: "Why Flagged" Evidence & Explainability Drawer (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Drawer Header -->
+<div class="flex items-center justify-between px-space-xs mb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">policy</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Why Flagged?</h2>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">shield</span> Deterministic Logic
+        </span>
+</div>
+<!-- Evidence Card Panel -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-sm flex flex-col gap-space-lg">
+<!-- Plain-Language Summary -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Clinical Reasoning</span>
+<p class="font-body-md text-body-md text-on-surface font-medium leading-relaxed">
+            Tumour board recommended chemotherapy 9 days ago. No medical oncology booking or daycare visit recorded in hospital EMR.
+          </p>
+</div>
+<!-- Clinician & Governance Sign-Off -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Governing Protocol &amp; Approver</span>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-lg text-label-lg text-on-surface">GI Post-Resection Adjuvant Protocol</div>
+<div class="font-body-sm text-body-sm text-outline">Version 1.2 • Section 4.1 (Chemotherapy Timelines)</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+</div>
+<div class="h-px w-full bg-surface-container"></div>
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface font-label-md text-label-md">
+                VM
+              </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface leading-tight">Dr. Vinod Menon</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Chief of Gastrointestinal Oncology • Signed 12 Aug 2024</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Threshold vs Reality Comparison Card -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Threshold vs. Reality</span>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Expected -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Allowed Protocol Gap</span>
+<span class="font-headline-md text-headline-md text-secondary mt-1">≤ 10 Days</span>
+<span class="font-body-sm text-body-sm text-outline mt-0.5">from surgical sign-off</span>
+</div>
+<!-- Observed -->
+<div class="p-space-md rounded-xl bg-error-container/30 flex flex-col">
+<span class="font-label-sm text-label-sm text-error font-medium">Actual Elapsed Gap</span>
+<span class="font-headline-md text-headline-md text-error mt-1">19 Days</span>
+<span class="font-body-sm text-body-sm text-error/80 mt-0.5">9 days overdue</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">code</span>
+<span>Trigger Rule: <code class="font-mono text-label-sm text-primary">Post_Resection_Gap &gt; 14_Days -&gt; Flag(Coordinator_Check)</code></span>
+</div>
+</div>
+<!-- Deterministic Replay Check Feature -->
+<div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-low">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">sync_saved_locally</span>
+<span class="font-label-lg text-label-lg text-on-surface">Deterministic Replay Check</span>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm shadow-sm transition-all flex items-center gap-1 active:scale-95" id="replay-btn" onclick="triggerReplayCheck()">
+<span class="material-symbols-outlined text-[14px] animate-spin hidden" id="replay-spinner">progress_activity</span>
+<span>Replay Check</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Runs the pure protocol rule engine over original, immutable EMR raw timestamps to prove zero temporal hallucination or algorithmic drift.
+          </p>
+<div class="transition-all duration-300 flex items-center gap-space-xs p-2 rounded-lg bg-secondary-fixed/50 text-on-secondary-fixed font-label-sm text-label-sm" id="replay-badge">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+<span id="replay-timestamp">✓ Same result (Replay verified 2 mins ago • zero drift)</span>
+</div>
+</div>
+<!-- Raw Source Audit Proof Snippets -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Raw Evidence Snippets</span>
+<!-- Snippet 1 -->
+<div class="p-space-sm rounded-xl bg-surface-container font-mono text-[11px] text-on-surface flex flex-col gap-1 overflow-x-auto">
+<div class="flex items-center justify-between text-outline">
+<span>ROW #412: EMR_TUMOUR_BOARD</span>
+<span class="text-primary font-bold">SHA-256: e8b9...c1</span>
+</div>
+<div class="text-on-surface-variant">
+              {"board_id":"TB-0924","pt_id":"PT-88204","consensus":"FOLFOX_6CYCLES","actionable_by":"2024-10-05T00:00:00Z","signed_by":"dr_v_menon"}
+            </div>
+</div>
+<!-- Snippet 2 -->
+<div class="p-space-sm rounded-xl bg-surface-container font-mono text-[11px] text-on-surface flex flex-col gap-1 overflow-x-auto mt-1">
+<div class="flex items-center justify-between text-outline">
+<span>ROW #9981: EMR_ADMISSIONS_REGISTER</span>
+<span class="text-secondary font-bold">QUERY: NULL</span>
+</div>
+<div class="text-on-surface-variant">
+              SELECT * FROM opd_visits WHERE patient_id='PT-88204' AND dept='MED_ONCOLOGY' AND timestamp &gt;= '2024-09-26' -&gt; 0 ROWS RETURNED
+            </div>
+</div>
+</div>
+<!-- Human Oversight Disclaimer Badge -->
+<div class="p-space-md rounded-xl bg-surface-container-high/60 flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-outline text-[20px] shrink-0 mt-0.5">supervised_user_circle</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Medora highlights administrative delays based strictly on verified hospital timestamps. Clinicians and coordinators retain full discretion to defer, re-triage, or dismiss flags without altering underlying medical records.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Source Document Crop Preview Modal (Lightweight overlay for auditability) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden items-center justify-center p-space-md" id="crop-modal">
+<div class="bg-surface-container-lowest rounded-2xl max-w-lg w-full p-space-xl shadow-xl flex flex-col gap-space-md relative">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" id="crop-title">Source Document Crop</h3>
+</div>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-outline transition-colors" onclick="toggleCropModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low font-body-md text-body-md text-on-surface leading-relaxed">
+<p id="crop-snippet">Loading snippet from encrypted hospital archive...</p>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-label-sm pt-space-xs">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">lock</span>
+          Signed with hospital private HSM key
+        </span>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" onclick="toggleCropModal()">
+          Close Preview
+        </button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

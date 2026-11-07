@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Medora pathway",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["pathway", "name", "version", "steps", "unreachable_after_attempts"],
+  "properties": {
+    "pathway": {"type": "string", "pattern": "^[a-z][a-z0-9_]{2,63}$"},
+    "name": {"type": "string", "minLength": 3, "maxLength": 120},
+    "version": {"type": "integer", "minimum": 1},
+    "demo": {"type": "boolean"},
+    "proposed": {"type": "boolean"},
+    "signed_by": {"type": ["string", "null"]},
+    "signed_at": {"type": ["string", "null"]},
+    "steps": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label", "event_type"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z][a-z0-9_]{1,63}$"},
+          "label": {"type": "string", "minLength": 2, "maxLength": 80},
+          "event_type": {"type": "string", "pattern": "^[a-z][a-z_]{1,63}$"},
+          "max_gap_days_from": {"type": "string", "pattern": "^[a-z][a-z0-9_]{1,63}$"},
+          "max_gap_days": {"type": "integer", "minimum": 1, "maximum": 365}
+        },
+        "dependentRequired": {"max_gap_days_from": ["max_gap_days"], "max_gap_days": ["max_gap_days_from"]}
+      }
+    },
+    "obligations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["when", "expects", "flag_if_missing_after_days"],
+        "properties": {
+          "when": {"type": "string"},
+          "expects": {"type": "string"},
+          "flag_if_missing_after_days": {"type": "integer", "minimum": 1, "maximum": 365}
+        }
+      }
+    },
+    "unreachable_after_attempts": {"type": "integer", "minimum": 1, "maximum": 20}
+  }
+}

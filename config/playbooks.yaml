@@ -1,0 +1,11 @@
+# Operational suggestions shown on the call card for the last known reason. Not clinical advice.
+# STATUS: PROPOSED. Wording to be agreed with the coordinator team and Clinical Lead.
+status: proposed
+by_reason:
+  cost: "Ask the social worker about support schemes. Offer to bundle lab, consult and pharmacy on one day to save trips."
+  distance: "Offer to bundle lab, consult and pharmacy on one day. Check if a nearer centre can see the patient."
+  fear: "Offer a callback from the nurse counsellor. Do not discuss treatment on this call."
+  feeling_better: "Explain the visit is already planned by the team. Offer the nurse callback for questions."
+  wrong_number: "Check other numbers on file. Mark the phone for data review."
+  moved: "Ask where the patient is now being seen. If treated elsewhere, close with the coded reason."
+  other: "Write a short note. Ask the team lead if unsure."

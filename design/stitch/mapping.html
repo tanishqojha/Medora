@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary":"#ffffff","primary-container":"#b45b43","on-primary-fixed":"#3c0800","surface-container":"#efeded","on-error":"#ffffff","on-tertiary-fixed":"#291800","surface-tint":"#98462f","secondary-fixed":"#ccead2","tertiary-fixed-dim":"#f9bb63","on-primary-container":"#fffbff","on-tertiary-container":"#fffbff","primary-fixed":"#ffdbd1","secondary":"#4a6452","on-surface":"#1b1c1c","surface-container-high":"#e9e8e7","inverse-on-surface":"#f2f0f0","surface-bright":"#faf9f8","outline-variant":"#dbc1ba","secondary-fixed-dim":"#b0ceb7","surface-dim":"#dbdad9","surface-container-low":"#f5f3f3","on-secondary":"#ffffff","tertiary-container":"#9c6b18","surface-container-highest":"#e3e2e2","on-primary":"#ffffff","outline":"#88726d","surface":"#faf9f8","background":"#faf9f8","tertiary":"#7f5300","error":"#ba1a1a","tertiary-fixed":"#ffddb3","on-tertiary-fixed-variant":"#633f00","primary-fixed-dim":"#ffb4a1","on-surface-variant":"#55433e","inverse-primary":"#ffb4a1","primary":"#95432d","on-error-container":"#93000a","surface-variant":"#e3e2e2","on-primary-fixed-variant":"#7a2f1b","secondary-container":"#c9e7cf","inverse-surface":"#303030","on-background":"#1b1c1c","on-secondary-container":"#4e6956","error-container":"#ffdad6","on-secondary-fixed":"#062012","surface-container-lowest":"#ffffff","on-secondary-fixed-variant":"#334c3b"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-mobile":"1rem","gutter-mobile":"0.75rem","space-xl":"2.25rem","space-md":"1rem","margin":"1.75rem","space-xs":"0.25rem","space-sm":"0.5rem","space-lg":"1.5rem","gutter":"1.25rem"},"fontFamily":{"headline-lg":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-lg":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"],"body-sm":["Inter"],"label-lg":["Inter"],"label-md":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"]},"fontSize":{"headline-lg":["28px",{"lineHeight":"36px","fontWeight":"600"}],"display-lg":["36px",{"lineHeight":"44px","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"28px","fontWeight":"600"}],"headline-lg-mobile":["22px",{"lineHeight":"30px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"500"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-lg-mobile":["28px",{"lineHeight":"36px","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><img alt="Medora Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XKo2fE7SWr1QTk81a5eFjkBmOLQUoslwgLKZGhp_Oo6AUu0TUg33B3B0tGNhyVE8GC-ZKargPD-sMd5rpUqH4Mwf4xNywxgGBEDSh9y_FiiuOMzWGFlxnrDCOK6K51d73HINB5IWsf3SEVh5kFsdwfNJgPePSXyD1mzE0uBHF0r4xc4io0lEykkX5Pqez3VA7pggkqI787zumqCXmD_LdpHdkijizSISh8-5HJnRGBwPxAAd7xi2C-2rM"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Medora</span></div><div class="px-space-md py-space-sm"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-fixed text-on-primary-fixed font-label-lg rounded-xl shadow-[0_1px_4px_rgba(0,0,0,0.03)]"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="stuck-list" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">error_med</span><span class="font-label-lg text-label-lg">Stuck List</span></div><span class="px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">12</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="review-queue" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">mark_email_unread</span><span class="font-label-lg text-label-lg">Review Queue</span></div><span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">4</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="uploads" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">drive_folder_upload</span><span class="font-label-lg text-label-lg">Uploads</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="pathways" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">alt_route</span><span class="font-label-lg text-label-lg">Pathways</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="trust" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-label-lg text-label-lg">Trust</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="audit" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">history_edu</span><span class="font-label-lg text-label-lg">Audit</span></div></a></nav></div></div><div class="p-space-md flex flex-col gap-space-sm bg-surface-container"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container-lowest flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span><span class="font-label-sm text-label-sm text-on-surface-variant">0 unconfirmed merges</span></div><div class="px-space-sm text-on-surface-variant font-body-sm text-body-sm flex items-center gap-space-xs"><span class="h-2 w-2 rounded-full bg-secondary"></span><span>Operating normally</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg gap-space-md"><div class="flex items-center gap-space-md flex-1 min-w-0"><div class="flex items-center gap-space-xs truncate"><span class="material-symbols-outlined text-[18px] text-primary">local_hospital</span><span class="font-label-lg text-label-lg text-on-surface truncate">Kaveri Multispeciality Hospital</span><span class="text-outline-variant">•</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Oncology Care Unit</span></div><div class="hidden xl:flex items-center gap-space-xs"><span class="px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm">Synthetic data</span><span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Replay</span></div></div><div class="flex-1 max-w-md hidden md:flex items-center"><div class="w-full flex items-center bg-surface-container-lowest rounded-xl px-space-md py-space-xs shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-space-sm">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none" placeholder="Search patient by name, ID or phone..." type="text"/><kbd class="font-label-sm text-label-sm bg-surface-container px-space-xs py-0.5 rounded text-on-surface-variant ml-space-xs">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center bg-surface-container-lowest rounded-xl px-space-sm py-1.5"><span class="font-label-sm text-label-sm text-on-surface-variant mr-space-xs">Role:</span><select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer pr-space-xs"><option selected="">Meera (Care Coordinator)</option><option>Clinical Lead (Gastrosurgeon)</option><option>Nurse (Triage)</option><option>Hospital Admin</option></select></div><button aria-label="Notifications" class="relative p-space-xs rounded-full hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-on-surface-variant text-[22px]">notifications</span><span class="absolute top-1 right-1 h-2 w-2 rounded-full bg-primary ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACQGkGVE8D-O7FpvaZ4-S8OGRDmOGP9V1Ok9AsGxnQ9SVKUJj0Ocb--GHpWdLR1-xdgtu10cAWw2ShfXPlY40HlCmGqTref9rKTXApH7S6S7RVatsdAIpAz8yNHvbQyBRAsTPk9uINMCvENR9i1lSS5f9mNfsaMqWJETFv2zopV0c55fmnQ9bwF2F9jEjvO7HRvHVSdGTqLnkgL_7LnTVDdttwNI8L-yXFQf_CTZk8vDZ0-L38-HBn"/><div class="hidden sm:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-tight">Meera</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Care Coordinator</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-margin"><div class="flex flex-col w-full pb-24">
+<!-- Learning & Fingerprint Header Banner -->
+<section class="mb-space-lg">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-secondary-fixed/30 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">psychology</span>
+              Layout Fingerprinting Active
+            </span>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+              New format detected — requires 1-time human sign-off
+            </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight pt-1">
+            Medora read this sheet once. Next time it will not need to.
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+            Sheet layout fingerprint saved to <span class="font-label-lg text-on-surface">Kaveri Multispeciality Hospital</span> template registry. Future uploads matching this header structure will map automatically without manual intervention.
+          </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 self-start lg:self-center">
+<div class="px-space-md py-space-sm rounded-xl bg-surface-container flex items-center gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Pipeline</span>
+<span class="font-label-lg text-label-lg text-on-surface">GI / Colorectal Protocol</span>
+</div>
+<div class="h-8 w-px bg-outline-variant/40"></div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Total Rows</span>
+<span class="font-headline-sm text-headline-sm text-primary">2,088</span>
+</div>
+</div>
+</div>
+</div>
+<!-- File Metadata Strip -->
+<div class="mt-space-md pt-space-md bg-surface-container-low/60 -mx-space-lg -mb-space-lg px-space-lg py-space-sm flex flex-wrap items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="flex items-center gap-1 font-label-lg text-label-lg text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary">description</span>
+            Tumour_Board_Minutes_Sept_Oct_2024.xlsx
+          </span>
+<span class="text-outline-variant">•</span>
+<span>18.4 MB</span>
+<span class="text-outline-variant">•</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">Sheet 1: GI_MDT_Log</span>
+<span class="text-outline-variant">•</span>
+<span>Uploaded by <strong class="text-on-surface font-label-sm">Meera (Care Coordinator)</strong> 3m ago</span>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-secondary">
+<span class="h-2 w-2 rounded-full bg-secondary animate-pulse"></span>
+          SHA-256 Hash Verified
+        </div>
+</div>
+</div>
+</section>
+<!-- Split Two-Column Architecture -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Raw File Preview (First 8 Rows) -->
+<div class="xl:col-span-6 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-md gap-space-sm flex-wrap">
+<div class="flex items-center gap-space-sm">
+<div class="p-space-xs rounded-lg bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[20px]">table_view</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Raw File Preview</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Showing 8 of 2,088 parsed rows</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low p-1 rounded-xl" id="viewToggleGroup">
+<button class="px-space-sm py-1 rounded-lg text-on-surface font-label-sm text-label-sm bg-surface-container-lowest shadow-sm transition-all" id="toggleCleaned">Cleaned Values</button>
+<button class="px-space-sm py-1 rounded-lg text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface transition-all" id="toggleRaw">Raw Cells</button>
+</div>
+</div>
+<!-- Scrollable Table -->
+<div class="overflow-x-auto rounded-xl bg-surface-container-lowest">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface font-label-sm text-label-sm whitespace-nowrap">
+<th class="p-space-sm font-label-md">#</th>
+<th class="p-space-sm font-label-md text-primary">MRN / Hosp_ID</th>
+<th class="p-space-sm font-label-md">Patient_Full_Name</th>
+<th class="p-space-sm font-label-md">Age/Sex</th>
+<th class="p-space-sm font-label-md text-tertiary">MDT_Discussion_Date</th>
+<th class="p-space-sm font-label-md">Primary_Diagnosis_ICD</th>
+<th class="p-space-sm font-label-md">Recommended_Plan</th>
+<th class="p-space-sm font-label-md">Primary_Consultant</th>
+<th class="p-space-sm font-label-md">Attendant_Contact</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container" id="spreadsheetBody">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-space-sm font-label-sm text-on-surface-variant">1</td>
+<td class="p-space-sm font-label-md text-primary bg-primary-fixed/20 font-mono">KMH-88219</td>
+<td class="p-space-sm font-label-md text-on-surface">Rajesh Kumar</td>
+<td class="p-space-sm text-on-surface">54 / M</td>
+<td class="p-space-sm font-label-md bg-tertiary-fixed/30 text-on-tertiary-fixed font-mono">04/05/2024</td>
+<td class="p-space-sm text-on-surface">C18.7 (Sigmoid)</td>
+<td class="p-space-sm text-on-surface-variant">Post-Resection Adjuvant Chemo</td>
+<td class="p-space-sm text-on-surface">Dr. Vinod Menon</td>
+<td class="p-space-sm font-mono text-on-surface">+91 98402 11042</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-space-sm font-label-sm text-on-surface-variant">2</td>
+<td class="p-space-sm font-label-md text-primary bg-primary-fixed/20 font-mono">KMH-90142</td>
+<td class="p-space-sm font-label-md text-on-surface">Meenakshi Sundaram</td>
+<td class="p-space-sm text-on-surface">62 / F</td>
+<td class="p-space-sm font-label-md bg-tertiary-fixed/30 text-on-tertiary-fixed font-mono">04/05/2024</td>
+<td class="p-space-sm text-on-surface">C20 (Rectum)</td>
+<td class="p-space-sm text-on-surface-variant">Neoadjuvant Chemo-RT review</td>
+<td class="p-space-sm text-on-surface">Dr. M. Sen</td>
+<td class="p-space-sm font-mono text-on-surface">+91 94441 55291</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-space-sm font-label-sm text-on-surface-variant">3</td>
+<td class="p-space-sm font-label-md text-primary bg-primary-fixed/20 font-mono">KMH-77401</td>
+<td class="p-space-sm font-label-md text-on-surface">Vikram Patel</td>
+<td class="p-space-sm text-on-surface">48 / M</td>
+<td class="p-space-sm font-label-md bg-tertiary-fixed/30 text-on-tertiary-fixed font-mono">04/05/2024</td>
+<td class="p-space-sm text-on-surface">C16.2 (Gastric Body)</td>
+<td class="p-space-sm text-on-surface-variant">Staging Laparoscopy sched</td>
+<td class="p-space-sm text-on-surface">Dr. Vinod Menon</td>
+<td class="p-space-sm font-mono text-on-surface">+91 97230 48819</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-space-sm font-label-sm text-on-surface-variant">4</td>
+<td class="p-space-sm font-label-md text-primary bg-primary-fixed/20 font-mono">KMH-62198</td>
+<td class="p-space-sm font-label-md text-on-surface">Sunita Devi</td>
+<td class="p-space-sm text-on-surface">59 / F</td>
+<td class="p-space-sm font-label-md bg-tertiary-fixed/30 text-on-tertiary-fixed font-mono">04/05/2024</td>
+<td class="p-space-sm text-on-surface">C25.0 (Head Pancreas)</td>
+<td class="p-space-sm text-on-surface-variant">Whipple resection clearance</td>
+<td class="p-space-sm text-on-surface">Dr. Vinod Menon</td>
+<td class="p-space-sm font-mono text-on-surface">+91 99104 33280</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-space-sm font-label-sm text-on-surface-variant">5</td>
+<td class="p-space-sm font-label-md text-primary bg-primary-fixed/20 font-mono">KMH-94420</td>
+<td class="p-space-sm font-label-md text-on-surface">Anand Deshmukh</td>
+<td class="p-space-sm text-on-surface">71 / M</td>
+<td class="p-space-sm font-label-md bg-tertiary-fixed/30 text-on-tertiary-fixed font-mono">05/05/2024</td>
+<td class="p-space-sm text-on-surface">C18.2 (Ascending)</td>
+<td class="p-space-sm text-on-surface-variant">Right Hemicolectomy Followup</td>
+<td class="p-space-sm text-on-surface">Dr. M. Sen</td>
+<td class="p-space-sm font-mono text-on-surface">+91 98220 77154</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-space-sm font-label-sm text-on-surface-variant">6</td>
+<td class="p-space-sm font-label-md text-primary bg-primary-fixed/20 font-mono">KMH-81395</td>
+<td class="p-space-sm font-label-md text-on-surface">Fatima Bi</td>
+<td class="p-space-sm text-on-surface">43 / F</td>
+<td class="p-space-sm font-label-md bg-tertiary-fixed/30 text-on-tertiary-fixed font-mono">05/05/2024</td>
+<td class="p-space-sm text-on-surface">C22.0 (HCC)</td>
+<td class="p-space-sm text-on-surface-variant">TACE referral evaluation</td>
+<td class="p-space-sm text-on-surface">Dr. Vinod Menon</td>
+<td class="p-space-sm font-mono text-on-surface">+91 98490 31177</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-space-sm font-label-sm text-on-surface-variant">7</td>
+<td class="p-space-sm font-label-md text-primary bg-primary-fixed/20 font-mono">KMH-76512</td>
+<td class="p-space-sm font-label-md text-on-surface">Gurpreet Singh</td>
+<td class="p-space-sm text-on-surface">66 / M</td>
+<td class="p-space-sm font-label-md bg-tertiary-fixed/30 text-on-tertiary-fixed font-mono">05/05/2024</td>
+<td class="p-space-sm text-on-surface">C15.4 (Mid-Thoracic Oes)</td>
+<td class="p-space-sm text-on-surface-variant">FLOT Regimen Cycle 1</td>
+<td class="p-space-sm text-on-surface">Dr. M. Sen</td>
+<td class="p-space-sm font-mono text-on-surface">+91 98150 99402</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-space-sm font-label-sm text-on-surface-variant">8</td>
+<td class="p-space-sm font-label-md text-primary bg-primary-fixed/20 font-mono">KMH-90204</td>
+<td class="p-space-sm font-label-md text-on-surface">Kavita Narang</td>
+<td class="p-space-sm text-on-surface">51 / F</td>
+<td class="p-space-sm font-label-md bg-tertiary-fixed/30 text-on-tertiary-fixed font-mono">05/05/2024</td>
+<td class="p-space-sm text-on-surface">C18.0 (Caecum)</td>
+<td class="p-space-sm text-on-surface-variant">Molecular profiling NGS sent</td>
+<td class="p-space-sm text-on-surface">Dr. Vinod Menon</td>
+<td class="p-space-sm font-mono text-on-surface">+91 99301 44521</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mt-space-md p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span>All 8 columns recognized with zero unmapped cells</span>
+</div>
+<span class="font-label-sm text-label-sm">Encoding: UTF-8 (Excel OOXML)</span>
+</div>
+</div>
+<!-- Human Verification Protocol Box -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">verified_user</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Clinical Coordinator Sign-off</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">NABH Rule #41</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Per Kaveri Multidisciplinary Oncology protocol, automated entity mappings require confirmation by the assigned care coordinator before updating patient registry timelines.
+        </p>
+<div class="mt-space-md grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Audit Actor</span>
+<span class="font-label-lg text-label-lg text-on-surface">Meera (Lead Coordinator)</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Session Action</span>
+<span class="font-label-lg text-label-lg text-secondary">First-time Ingest + Template</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Detected Column Mappings & Field Pairing -->
+<div class="xl:col-span-6 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-md border-b-0">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Detected Field Mappings</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">8 columns identified from spreadsheet header</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+              7 Auto-Verified
+            </span>
+<span class="px-space-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm">
+              1 Ambiguous
+            </span>
+</div>
+</div>
+<!-- Mappings List -->
+<div class="flex flex-col gap-space-sm">
+<!-- Card 1: MRN -->
+<div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between gap-space-sm flex-wrap">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">badge</span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Spreadsheet Header</span>
+<div class="font-label-lg text-label-lg text-on-surface font-mono">MRN / Hosp_ID</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[18px]">arrow_forward</span>
+<div class="flex items-center gap-space-sm">
+<div class="min-w-0 text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hospital Entity</span>
+<div class="font-label-lg text-label-lg text-primary">Patient MRN (PT-ID)</div>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shrink-0">99% Match</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Full Name -->
+<div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between gap-space-sm flex-wrap">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">person</span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Spreadsheet Header</span>
+<div class="font-label-lg text-label-lg text-on-surface font-mono">Patient_Full_Name</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[18px]">arrow_forward</span>
+<div class="flex items-center gap-space-sm">
+<div class="min-w-0 text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hospital Entity</span>
+<div class="font-label-lg text-label-lg text-primary">Patient Legal Name</div>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shrink-0">98% Match</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Age/Sex Split Parser -->
+<div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between gap-space-sm flex-wrap">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">cake</span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Spreadsheet Header</span>
+<div class="font-label-lg text-label-lg text-on-surface font-mono">Age/Sex</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[18px]">arrow_forward</span>
+<div class="flex items-center gap-space-sm">
+<div class="min-w-0 text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Composite Parser</span>
+<div class="font-label-lg text-label-lg text-primary">Demographics (Age + Gender)</div>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shrink-0">95% Match</span>
+</div>
+</div>
+<div class="mt-2 pt-2 bg-surface-container-lowest/70 rounded-lg p-space-xs px-space-sm text-on-surface-variant font-body-sm text-body-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">splitscreen</span>
+<span>Splits pattern <code class="font-mono bg-surface-container px-1 rounded text-on-surface">"54 / M"</code> into Age: <strong class="text-on-surface">54</strong> and Gender: <strong class="text-on-surface">Male</strong></span>
+</div>
+</div>
+<!-- Card 4: AMBIGUOUS DATE CALLOUT (Active Focus) -->
+<div class="p-space-md rounded-xl bg-tertiary-fixed/20 shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[22px]">warning</span>
+<span class="font-label-lg text-label-lg text-tertiary">Action Required: Ambiguous Date Format</span>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-tertiary text-on-tertiary font-label-sm text-label-sm">Human Decision</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+              Field <code class="font-mono font-label-lg text-tertiary bg-surface-container-lowest px-1.5 py-0.5 rounded">MDT_Discussion_Date</code> contains dates like <strong class="text-on-surface">04/05/2024</strong>. Is this 4 May or 5 April?
+            </p>
+<!-- Option Selectors -->
+<div class="mt-space-md grid grid-cols-1 md:grid-cols-2 gap-space-sm" id="dateRadioGroup">
+<!-- Option A: Selected -->
+<label class="cursor-pointer p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between transition-all" id="dateOptionAContainer">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<input checked="" class="accent-primary text-primary w-4 h-4" id="radioOptionA" name="date_format" type="radio" value="DD_MM_YYYY"/>
+<span class="font-label-lg text-label-lg text-on-surface">04 May 2024</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Recommended</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Standard Indian Hospital format (DD/MM/YYYY). Matches sequence of initial biopsy records (April 2024).
+                  </p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                  Conforms with Kaveri HIS default
+                </div>
+</label>
+<!-- Option B -->
+<label class="cursor-pointer p-space-md rounded-xl bg-surface-container-lowest/70 hover:bg-surface-container-lowest shadow-sm flex flex-col justify-between transition-all opacity-80" id="dateOptionBContainer">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<input class="accent-primary text-primary w-4 h-4" id="radioOptionB" name="date_format" type="radio" value="MM_DD_YYYY"/>
+<span class="font-label-lg text-label-lg text-on-surface">05 April 2024</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">US Format</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    US format (MM/DD/YYYY). Inconsistent: would log Tumour Board prior to primary endoscopic diagnostic date.
+                  </p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center gap-1 text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">info</span>
+                  Potential timeline anomaly
+                </div>
+</label>
+</div>
+</div>
+<!-- Card 5: Diagnosis -->
+<div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between gap-space-sm flex-wrap">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">medical_information</span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Spreadsheet Header</span>
+<div class="font-label-lg text-label-lg text-on-surface font-mono">Primary_Diagnosis_ICD</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[18px]">arrow_forward</span>
+<div class="flex items-center gap-space-sm">
+<div class="min-w-0 text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hospital Entity</span>
+<div class="font-label-lg text-label-lg text-primary">ICD-10 Clinical Staging</div>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shrink-0">99% Match</span>
+</div>
+</div>
+</div>
+<!-- Card 6: Recommended Plan -->
+<div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between gap-space-sm flex-wrap">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">assignment_turned_in</span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Spreadsheet Header</span>
+<div class="font-label-lg text-label-lg text-on-surface font-mono">Recommended_Plan</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[18px]">arrow_forward</span>
+<div class="flex items-center gap-space-sm">
+<div class="min-w-0 text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hospital Entity</span>
+<div class="font-label-lg text-label-lg text-primary">Protocol Obligation / Step</div>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shrink-0">92% Match</span>
+</div>
+</div>
+</div>
+<!-- Card 7: Primary Consultant -->
+<div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between gap-space-sm flex-wrap">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">stethoscope</span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Spreadsheet Header</span>
+<div class="font-label-lg text-label-lg text-on-surface font-mono">Primary_Consultant</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[18px]">arrow_forward</span>
+<div class="flex items-center gap-space-sm">
+<div class="min-w-0 text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hospital Entity</span>
+<div class="font-label-lg text-label-lg text-primary">Attending Oncologist / Surgeon</div>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shrink-0">96% Match</span>
+</div>
+</div>
+</div>
+<!-- Card 8: Contact -->
+<div class="p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between gap-space-sm flex-wrap">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">phone_iphone</span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Spreadsheet Header</span>
+<div class="font-label-lg text-label-lg text-on-surface font-mono">Attendant_Contact</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[18px]">arrow_forward</span>
+<div class="flex items-center gap-space-sm">
+<div class="min-w-0 text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hospital Entity</span>
+<div class="font-label-lg text-label-lg text-primary">Primary Phone (+91 IN)</div>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shrink-0">97% Match</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Confirmation & Ingestion Control Dock -->
+<div class="fixed bottom-0 left-64 right-0 bg-surface-container-lowest/95 backdrop-blur-xl shadow-lg z-30 px-space-lg py-space-md">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-space-md">
+<!-- Checkbox & Audit Indicator -->
+<div class="flex flex-col gap-1">
+<label class="flex items-center gap-space-sm cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary focus:ring-0 cursor-pointer" id="saveTemplateCheckbox" type="checkbox"/>
+<span class="font-label-lg text-label-lg text-on-surface">
+            Save as template <strong class="text-primary font-mono">'Kaveri GI Tumour Board Format v1'</strong> for all future uploads
+          </span>
+</label>
+<span class="text-on-surface-variant font-body-sm text-body-sm flex items-center gap-1.5 pl-6">
+<span class="material-symbols-outlined text-[15px] text-secondary">history_edu</span>
+          Deterministic mapping rule will be logged in Kaveri Audit Trail. Zero diagnostic inferences.
+        </span>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-sm shrink-0 w-full md:w-auto justify-end">
+<button class="px-space-md py-2.5 rounded-lg text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-colors" id="btnReject">
+          Reject Sheet
+        </button>
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-colors flex items-center gap-1.5" id="btnEditRules">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+          Edit Field Rules
+        </button>
+<button class="px-space-lg py-2.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary-container transition-all flex items-center gap-2 group" id="btnConfirmIngest">
+<span>Confirm Mapping &amp; Ingest 2,088 Rows</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Success Notification Toast (Hidden by default) -->
+<div class="fixed top-20 right-8 z-50 transform translate-y-4 opacity-0 pointer-events-none transition-all duration-300 bg-surface-container-lowest p-space-md rounded-xl shadow-xl flex items-center gap-space-md max-w-md" id="ingestToast">
+<div class="p-space-xs rounded-full bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[24px]">task_alt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Mapping Confirmed</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Template registry updated. 2,088 records queued for MDT sync.</span>
+</div>
+</div>
+</div>
+<script>
+  // Cleaned vs Raw Value toggle
+  const toggleCleaned = document.getElementById('toggleCleaned');
+  const toggleRaw = document.getElementById('toggleRaw');
+  const tableBody = document.getElementById('spreadsheetBody');
+
+  if (toggleCleaned && toggleRaw) {
+    toggleCleaned.addEventListener('click', () => {
+      toggleCleaned.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+      toggleCleaned.classList.remove('text-on-surface-variant');
+      toggleRaw.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+      toggleRaw.classList.add('text-on-surface-variant');
+      tableBody.querySelectorAll('td').forEach(td => td.classList.remove('opacity-70'));
+    });
+
+    toggleRaw.addEventListener('click', () => {
+      toggleRaw.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+      toggleRaw.classList.remove('text-on-surface-variant');
+      toggleCleaned.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+      toggleCleaned.classList.add('text-on-surface-variant');
+      tableBody.querySelectorAll('td').forEach(td => td.classList.add('opacity-70'));
+    });
+  }
+
+  // Ambiguous Date radio selection styling
+  const radioA = document.getElementById('radioOptionA');
+  const radioB = document.getElementById('radioOptionB');
+  const containerA = document.getElementById('dateOptionAContainer');
+  const containerB = document.getElementById('dateOptionBContainer');
+
+  function updateDateStyles() {
+    if (radioA && radioA.checked) {
+      containerA.classList.remove('opacity-80');
+      containerB.classList.add('opacity-80');
+    } else if (radioB && radioB.checked) {
+      containerB.classList.remove('opacity-80');
+      containerA.classList.add('opacity-80');
+    }
+  }
+
+  if (radioA && radioB) {
+    radioA.addEventListener('change', updateDateStyles);
+    radioB.addEventListener('change', updateDateStyles);
+  }
+
+  // Confirmation CTA Micro-interaction
+  const btnConfirm = document.getElementById('btnConfirmIngest');
+  const ingestToast = document.getElementById('ingestToast');
+
+  if (btnConfirm && ingestToast) {
+    btnConfirm.addEventListener('click', () => {
+      btnConfirm.disabled = true;
+      btnConfirm.innerHTML = `
+        <span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span>
+        <span>Ingesting 2,088 Rows...</span>
+      `;
+
+      setTimeout(() => {
+        ingestToast.classList.remove('translate-y-4', 'opacity-0', 'pointer-events-none');
+        btnConfirm.innerHTML = `
+          <span class="material-symbols-outlined text-[18px]">check</span>
+          <span>Ingested & Registered</span>
+        `;
+        btnConfirm.classList.remove('bg-primary');
+        btnConfirm.classList.add('bg-secondary');
+
+        setTimeout(() => {
+          ingestToast.classList.add('translate-y-4', 'opacity-0', 'pointer-events-none');
+        }, 3500);
+      }, 1200);
+    });
+  }
+</script></main></div></body></html>

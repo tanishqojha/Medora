@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary":"#ffffff","primary-container":"#b45b43","on-primary-fixed":"#3c0800","surface-container":"#efeded","on-error":"#ffffff","on-tertiary-fixed":"#291800","surface-tint":"#98462f","secondary-fixed":"#ccead2","tertiary-fixed-dim":"#f9bb63","on-primary-container":"#fffbff","on-tertiary-container":"#fffbff","primary-fixed":"#ffdbd1","secondary":"#4a6452","on-surface":"#1b1c1c","surface-container-high":"#e9e8e7","inverse-on-surface":"#f2f0f0","surface-bright":"#faf9f8","outline-variant":"#dbc1ba","secondary-fixed-dim":"#b0ceb7","surface-dim":"#dbdad9","surface-container-low":"#f5f3f3","on-secondary":"#ffffff","tertiary-container":"#9c6b18","surface-container-highest":"#e3e2e2","on-primary":"#ffffff","outline":"#88726d","surface":"#faf9f8","background":"#faf9f8","tertiary":"#7f5300","error":"#ba1a1a","tertiary-fixed":"#ffddb3","on-tertiary-fixed-variant":"#633f00","primary-fixed-dim":"#ffb4a1","on-surface-variant":"#55433e","inverse-primary":"#ffb4a1","primary":"#95432d","on-error-container":"#93000a","surface-variant":"#e3e2e2","on-primary-fixed-variant":"#7a2f1b","secondary-container":"#c9e7cf","inverse-surface":"#303030","on-background":"#1b1c1c","on-secondary-container":"#4e6956","error-container":"#ffdad6","on-secondary-fixed":"#062012","surface-container-lowest":"#ffffff","on-secondary-fixed-variant":"#334c3b"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-mobile":"1rem","gutter-mobile":"0.75rem","space-xl":"2.25rem","space-md":"1rem","margin":"1.75rem","space-xs":"0.25rem","space-sm":"0.5rem","space-lg":"1.5rem","gutter":"1.25rem"},"fontFamily":{"headline-lg":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-lg":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"],"body-sm":["Inter"],"label-lg":["Inter"],"label-md":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"]},"fontSize":{"headline-lg":["28px",{"lineHeight":"36px","fontWeight":"600"}],"display-lg":["36px",{"lineHeight":"44px","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"28px","fontWeight":"600"}],"headline-lg-mobile":["22px",{"lineHeight":"30px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"500"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"display-lg-mobile":["28px",{"lineHeight":"36px","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><img alt="Medora Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XKo2fE7SWr1QTk81a5eFjkBmOLQUoslwgLKZGhp_Oo6AUu0TUg33B3B0tGNhyVE8GC-ZKargPD-sMd5rpUqH4Mwf4xNywxgGBEDSh9y_FiiuOMzWGFlxnrDCOK6K51d73HINB5IWsf3SEVh5kFsdwfNJgPePSXyD1mzE0uBHF0r4xc4io0lEykkX5Pqez3VA7pggkqI787zumqCXmD_LdpHdkijizSISh8-5HJnRGBwPxAAd7xi2C-2rM"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Medora</span></div><div class="px-space-md py-space-sm"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-fixed text-on-primary-fixed font-label-lg rounded-xl shadow-[0_1px_4px_rgba(0,0,0,0.03)]"><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm transition-all bg-primary-fixed text-on-primary-fixed font-label-lg rounded-xl shadow-[0_1px_4px_rgba(0,0,0,0.03)]" data-path="stuck-list" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">error_med</span><span class="font-label-lg text-label-lg">Stuck List</span></div><span class="px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">12</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="review-queue" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">mark_email_unread</span><span class="font-label-lg text-label-lg">Review Queue</span></div><span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">4</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="uploads" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">drive_folder_upload</span><span class="font-label-lg text-label-lg">Uploads</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="pathways" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">alt_route</span><span class="font-label-lg text-label-lg">Pathways</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="trust" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-label-lg text-label-lg">Trust</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="audit" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">history_edu</span><span class="font-label-lg text-label-lg">Audit</span></div></a></nav></div></div><div class="p-space-md flex flex-col gap-space-sm bg-surface-container"><div class="px-space-sm py-space-xs rounded-lg bg-surface-container-lowest flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span><span class="font-label-sm text-label-sm text-on-surface-variant">0 unconfirmed merges</span></div><div class="px-space-sm text-on-surface-variant font-body-sm text-body-sm flex items-center gap-space-xs"><span class="h-2 w-2 rounded-full bg-secondary"></span><span>Operating normally</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg gap-space-md"><div class="flex items-center gap-space-md flex-1 min-w-0"><div class="flex items-center gap-space-xs truncate"><span class="material-symbols-outlined text-[18px] text-primary">local_hospital</span><span class="font-label-lg text-label-lg text-on-surface truncate">Kaveri Multispeciality Hospital</span><span class="text-outline-variant">•</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Oncology Care Unit</span></div><div class="hidden xl:flex items-center gap-space-xs"><span class="px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm">Synthetic data</span><span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Replay</span></div></div><div class="flex-1 max-w-md hidden md:flex items-center"><div class="w-full flex items-center bg-surface-container-lowest rounded-xl px-space-md py-space-xs shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-space-sm">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none" placeholder="Search patient by name, ID or phone..." type="text"/><kbd class="font-label-sm text-label-sm bg-surface-container px-space-xs py-0.5 rounded text-on-surface-variant ml-space-xs">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center bg-surface-container-lowest rounded-xl px-space-sm py-1.5"><span class="font-label-sm text-label-sm text-on-surface-variant mr-space-xs">Role:</span><select class="bg-transparent font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer pr-space-xs"><option selected="">Meera (Care Coordinator)</option><option>Clinical Lead (Gastrosurgeon)</option><option>Nurse (Triage)</option><option>Hospital Admin</option></select></div><button aria-label="Notifications" class="relative p-space-xs rounded-full hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-on-surface-variant text-[22px]">notifications</span><span class="absolute top-1 right-1 h-2 w-2 rounded-full bg-primary ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACQGkGVE8D-O7FpvaZ4-S8OGRDmOGP9V1Ok9AsGxnQ9SVKUJj0Ocb--GHpWdLR1-xdgtu10cAWw2ShfXPlY40HlCmGqTref9rKTXApH7S6S7RVatsdAIpAz8yNHvbQyBRAsTPk9uINMCvENR9i1lSS5f9mNfsaMqWJETFv2zopV0c55fmnQ9bwF2F9jEjvO7HRvHVSdGTqLnkgL_7LnTVDdttwNI8L-yXFQf_CTZk8vDZ0-L38-HBn"/><div class="hidden sm:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-tight">Meera</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Care Coordinator</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen w-full px-space-margin"><div class="flex flex-col w-full pb-16">
+<!-- Top Context & Header Banner -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+<div>
+<div class="flex items-center gap-space-sm mb-1.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          Care Coordinator Console
+        </span>
+<span class="text-outline-variant font-label-sm text-label-sm">•</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Updated 4 mins ago</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">12 patients are stuck today</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-1">
+        Patients with missed or delayed next steps in oncology pathways. Ranked by protocol urgency.
+      </p>
+</div>
+<!-- Quick Human Actions -->
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">tune</span>
+        Re-rank List
+      </button>
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">download</span>
+        Export Call Sheet
+      </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface transition-colors" title="Revert previous logged call note">
+<span class="material-symbols-outlined text-[16px]">undo</span>
+        Undo Status
+      </button>
+</div>
+</div>
+<!-- Summary Metric Pill Bar -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Stat 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-[22px]">warning</span>
+</div>
+<div>
+<div class="font-display-lg text-headline-lg text-on-surface leading-none mb-1">12</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Stuck Patients</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm">High Attention</span>
+</div>
+<!-- Stat 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[22px]">call_end</span>
+</div>
+<div>
+<div class="font-display-lg text-headline-lg text-on-surface leading-none mb-1">5</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Calls Done Today</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">On Track</span>
+</div>
+<!-- Stat 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">ring_volume</span>
+</div>
+<div>
+<div class="font-display-lg text-headline-lg text-on-surface leading-none mb-1">3</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Awaiting Callback</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Pending</span>
+</div>
+<!-- Stat 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-error-container flex items-center justify-center text-on-error-container">
+<span class="material-symbols-outlined text-[22px]">person_alert</span>
+</div>
+<div>
+<div class="font-display-lg text-headline-lg text-error leading-none mb-1">1</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Needs Human Review</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">Urgent Escalation</span>
+</div>
+</div>
+<!-- Hero Highlight Card: Recommended Next Call -->
+<div class="relative bg-surface-container-lowest rounded-2xl shadow-md p-space-lg mb-space-lg overflow-hidden">
+<!-- Subtle warm corner glow accent -->
+<div class="absolute -right-16 -top-16 w-56 h-56 bg-primary-fixed/40 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg relative z-10">
+<!-- Left side: Patient & Stuck Context -->
+<div class="flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-space-sm mb-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">stars</span>
+            Recommended Next Call
+          </span>
+<span class="px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm inline-flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+            9 days overdue
+          </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+            GI / Colorectal Pathway
+          </span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+            Automated flag: High (94%)
+          </span>
+</div>
+<div class="flex items-baseline gap-space-sm mb-2">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Rajesh Kumar</h2>
+<span class="font-label-lg text-label-lg text-on-surface-variant">54M • PT-88204</span>
+</div>
+<!-- Plain English Delay Reason -->
+<div class="p-space-sm bg-surface-container-low rounded-xl mb-3 max-w-3xl">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5 shrink-0">info</span>
+<div>
+<p class="font-body-md text-body-md text-on-surface font-medium">
+                Tumour board recommended chemo 9 days ago. No oncology appointment booked.
+              </p>
+<div class="flex flex-wrap items-center gap-3 mt-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span>Stuck step: <strong class="text-on-surface font-medium">Post-tumour board Chemo booking</strong></span>
+<span>•</span>
+<span>History: 1 attempt (Yesterday 4:15 PM, no answer)</span>
+<span>•</span>
+<a class="text-primary hover:underline inline-flex items-center gap-0.5" href="#source-rajesh">
+<span class="material-symbols-outlined text-[14px]">description</span>
+                  See source (Discharge Summary p.2)
+                </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right side: Quick Action CTA Group -->
+<div class="flex flex-col sm:flex-row lg:flex-col items-stretch lg:items-end gap-space-sm shrink-0">
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary-container transition-all active:scale-[0.99] text-center" href="tel:+919820144521">
+<span class="material-symbols-outlined text-[20px]">call</span>
+          Call Rajesh Kumar (+91 98201 44521)
+        </a>
+<div class="flex items-center gap-2">
+<button class="flex-1 lg:flex-none inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[16px]">timeline</span>
+            Why Flagged
+          </button>
+<button class="flex-1 lg:flex-none inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+            Assign / Defer
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Main 12-Column Layout (Data Grid + Operational Right Bar) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left 8.5 Columns: Filters + Patients Roster -->
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<!-- Interactive Filter Controls Strip -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-2">
+<!-- Pathway filter -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg pl-3 pr-8 py-2 focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option>All Pathways (12)</option>
+<option>GI / Colorectal (5)</option>
+<option>Breast Oncology (3)</option>
+<option>Thoracic / Lung (2)</option>
+<option>Gynaecologic (2)</option>
+</select>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant absolute right-2 top-2.5 pointer-events-none">expand_more</span>
+</div>
+<!-- Overdue Filter -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg pl-3 pr-8 py-2 focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option>Overdue: All</option>
+<option>> 7 days overdue (4)</option>
+<option>3 - 7 days overdue (6)</option>
+<option>1 - 2 days overdue (2)</option>
+</select>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant absolute right-2 top-2.5 pointer-events-none">expand_more</span>
+</div>
+<!-- Attempts filter -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg pl-3 pr-8 py-2 focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option>Call attempts: Any</option>
+<option>0 calls attempted (5)</option>
+<option>1 call attempted (4)</option>
+<option>2+ calls attempted (3)</option>
+</select>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant absolute right-2 top-2.5 pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Coordinator Toggle -->
+<div class="flex items-center bg-surface-container-high p-1 rounded-xl">
+<button class="px-3 py-1 rounded-lg bg-surface-container-lowest font-label-sm text-label-sm text-on-surface shadow-xs transition-all">
+            Assigned to me (8)
+          </button>
+<button class="px-3 py-1 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all">
+            All coordinators (12)
+          </button>
+</div>
+</div>
+<!-- Ranked Roster Table Card -->
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden">
+<div class="px-space-md py-space-sm bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Priority List</span>
+<span class="text-outline-variant font-label-sm text-label-sm">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sorted by protocol lapse duration</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Showing 5 of 12</span>
+</div>
+<div class="divide-y-0">
+<!-- Patient Row 1: Smt. Ananya Sen -->
+<div class="p-space-md hover:bg-surface-container-low transition-colors bg-surface-container-lowest">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+<div class="flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2 mb-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Smt. Ananya Sen</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">48F • PT-99120</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Breast Oncology</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-medium">7 days overdue</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-2">
+<strong class="font-medium text-primary">Post-op biopsy review pending:</strong> Biopsy accessioned 12 Oct, no follow-up consult scheduled.
+                </p>
+<div class="flex flex-wrap items-center gap-3 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">phone_missed</span>
+                    0 attempts logged
+                  </span>
+<span>•</span>
+<span class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">
+                    Automated flag: 91%
+                  </span>
+<a class="text-primary hover:underline inline-flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]">link</span>
+                    Source: Histopathology Lab #HP-281
+                  </a>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0 pt-2 md:pt-0">
+<button class="inline-flex items-center gap-1 px-4 py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[18px]">call</span>
+                  Call
+                </button>
+<button class="inline-flex items-center gap-1 px-3 py-2 rounded-xl bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container-highest transition-colors">
+                  Why flagged
+                </button>
+</div>
+</div>
+</div>
+<!-- Divider -->
+<div class="h-px bg-surface-container-high mx-space-md"></div>
+<!-- Patient Row 2: Vikram Patel -->
+<div class="p-space-md hover:bg-surface-container-low transition-colors bg-surface-container-lowest">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+<div class="flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2 mb-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Vikram Patel</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">62M • PT-74312</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Gastric Adenocarcinoma</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-medium">6 days overdue</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-2">
+<strong class="font-medium text-primary">Staging PET-CT delayed:</strong> Scan requested 3 Oct, hospital PACS shows no scan uploaded.
+                </p>
+<div class="flex flex-wrap items-center gap-3 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary">phone_in_talk</span>
+                    2 attempts (Busy / line disconnected)
+                  </span>
+<span>•</span>
+<span class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">
+                    Automated flag: 88%
+                  </span>
+<a class="text-primary hover:underline inline-flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]">link</span>
+                    Source: Clinical Requisition #REQ-449
+                  </a>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0 pt-2 md:pt-0">
+<button class="inline-flex items-center gap-1 px-4 py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[18px]">call</span>
+                  Call
+                </button>
+<button class="inline-flex items-center gap-1 px-3 py-2 rounded-xl bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container-highest transition-colors">
+                  Why flagged
+                </button>
+</div>
+</div>
+</div>
+<!-- Divider -->
+<div class="h-px bg-surface-container-high mx-space-md"></div>
+<!-- Patient Row 3: Sunita Devi -->
+<div class="p-space-md hover:bg-surface-container-low transition-colors bg-surface-container-lowest">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+<div class="flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2 mb-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Sunita Devi</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">58F • PT-63219</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Cervical Oncology</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-medium">4 days overdue</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-2">
+<strong class="font-medium text-primary">Chemoradiation Cycle 2:</strong> Cycle 1 completed 28 Sep, cycle 2 scheduled date missed.
+                </p>
+<div class="flex flex-wrap items-center gap-3 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">ring_volume</span>
+                    1 attempt (Spoke to daughter, callback promised)
+                  </span>
+<span>•</span>
+<span class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">
+                    Automated flag: 96%
+                  </span>
+<a class="text-primary hover:underline inline-flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]">link</span>
+                    Source: Chemotherapy Daycare Log #DC-104
+                  </a>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0 pt-2 md:pt-0">
+<button class="inline-flex items-center gap-1 px-4 py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[18px]">call</span>
+                  Call
+                </button>
+<button class="inline-flex items-center gap-1 px-3 py-2 rounded-xl bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container-highest transition-colors">
+                  Why flagged
+                </button>
+</div>
+</div>
+</div>
+<!-- Divider -->
+<div class="h-px bg-surface-container-high mx-space-md"></div>
+<!-- Patient Row 4: Mohan Lal -->
+<div class="p-space-md hover:bg-surface-container-low transition-colors bg-surface-container-lowest">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+<div class="flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2 mb-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Mohan Lal</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">67M • PT-52011</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Colorectal Pathway</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-medium">3 days overdue</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-2">
+<strong class="font-medium text-primary">Surgical consult:</strong> Referral sent from OPD, no IPD or clinic booking found.
+                </p>
+<div class="flex flex-wrap items-center gap-3 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">phone_missed</span>
+                    0 attempts logged
+                  </span>
+<span>•</span>
+<span class="flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">
+                    Automated flag: 85%
+                  </span>
+<a class="text-primary hover:underline inline-flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]">link</span>
+                    Source: GI Surgery Referral Note #REF-109
+                  </a>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0 pt-2 md:pt-0">
+<button class="inline-flex items-center gap-1 px-4 py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[18px]">call</span>
+                  Call
+                </button>
+<button class="inline-flex items-center gap-1 px-3 py-2 rounded-xl bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container-highest transition-colors">
+                  Why flagged
+                </button>
+</div>
+</div>
+</div>
+<!-- Divider -->
+<div class="h-px bg-surface-container-high mx-space-md"></div>
+<!-- Patient Row 5: Greyed / Contacted Today State (Kavita Iyer) -->
+<div class="p-space-md bg-surface-container-low/60 opacity-80 hover:opacity-100 transition-opacity">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+<div class="flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2 mb-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface-variant font-semibold truncate line-through">Kavita Iyer</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">51F • PT-39042</span>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span>
+                    Contacted today (11:15 AM)
+                  </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-1">
+                  Outcome: Patient confirmed attending OPD tomorrow at 10:30 AM with Dr. V. Menon.
+                </p>
+<div class="flex flex-wrap items-center gap-3 font-label-sm text-label-sm text-on-surface-variant">
+<span>Logged by: Meera (Care Coordinator)</span>
+<span>•</span>
+<span>2 calls completed</span>
+<span>•</span>
+<span class="text-secondary font-medium">Resolved from active stuck list</span>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0 pt-2 md:pt-0">
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+                  View Notes
+                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Table Footer Pagination Strip -->
+<div class="p-space-md bg-surface-container-low flex items-center justify-between border-t border-surface-container-high">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Showing 5 of 12 patients needing contact</span>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1 rounded-lg bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface transition-colors disabled:opacity-50" disabled="">Previous</button>
+<button class="px-3 py-1 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors">Next page</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right 4 Columns: Analytical Insights & Coordinator Toolkit -->
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- Card: Stuck by Pathway Step Distribution -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Stuck by Pathway Step</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">12 total</span>
+</div>
+<!-- Step breakdown list with visual bar meters -->
+<div class="flex flex-col gap-space-sm mb-4">
+<!-- Step 1 -->
+<div>
+<div class="flex justify-between items-center font-label-md text-label-md text-on-surface mb-1">
+<span>Treatment booking</span>
+<span class="font-medium text-on-surface">5 patients (42%)</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 42%;"></div>
+</div>
+</div>
+<!-- Step 2 -->
+<div>
+<div class="flex justify-between items-center font-label-md text-label-md text-on-surface mb-1">
+<span>Post-Tumour Board action</span>
+<span class="font-medium text-on-surface">4 patients (33%)</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 33%;"></div>
+</div>
+</div>
+<!-- Step 3 -->
+<div>
+<div class="flex justify-between items-center font-label-md text-label-md text-on-surface mb-1">
+<span>Diagnostic / Scan scheduling</span>
+<span class="font-medium text-on-surface">2 patients (17%)</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 17%;"></div>
+</div>
+</div>
+<!-- Step 4 -->
+<div>
+<div class="flex justify-between items-center font-label-md text-label-md text-on-surface mb-1">
+<span>Lab / Biopsy sign-off</span>
+<span class="font-medium text-on-surface">1 patient (8%)</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-surface-container-highest h-full rounded-full" style="width: 8%;"></div>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant p-2.5 rounded-lg bg-surface-container-low">
+<strong class="text-on-surface font-medium">Bottleneck notice:</strong> Chemotherapy daycare chair scheduling slot availability is currently causing 50% of booking stalls.
+        </p>
+</div>
+<!-- Card: Today's Coordinator Outcomes (Visual Donut & Breakdown) -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Today's Call Outcomes</h3>
+<span class="font-label-sm text-label-sm text-secondary font-medium">5 completed</span>
+</div>
+<div class="flex items-center gap-space-md py-space-sm">
+<!-- Inline Donut SVG Chart -->
+<div class="relative w-24 h-24 shrink-0">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<!-- Background ring -->
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4.5"></path>
+<!-- Segment 1: Rescheduled (60%) -->
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="60, 100" stroke-linecap="round" stroke-width="4.5"></path>
+<!-- Segment 2: Transport (20%) -->
+<path class="text-tertiary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="20, 100" stroke-dashoffset="-60" stroke-linecap="round" stroke-width="4.5"></path>
+<!-- Segment 3: No Answer (20%) -->
+<path class="text-outline-variant" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="20, 100" stroke-dashoffset="-80" stroke-linecap="round" stroke-width="4.5"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+<span class="font-headline-sm text-headline-sm text-on-surface leading-none font-bold">5</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Calls</span>
+</div>
+</div>
+<!-- Legend & Counts -->
+<div class="flex flex-col gap-1.5 flex-1 min-w-0">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5 text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary shrink-0"></span>
+                Rescheduled
+              </span>
+<span class="font-semibold text-on-surface">3</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5 text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary shrink-0"></span>
+                Assistance Arranged
+              </span>
+<span class="font-semibold text-on-surface">1</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant shrink-0"></span>
+                No Answer
+              </span>
+<span class="font-semibold text-on-surface-variant">1</span>
+</div>
+</div>
+</div>
+<div class="mt-2 pt-space-sm border-t border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface">Next scheduled follow-up block: <strong>2:30 PM today</strong></span>
+</div>
+</div>
+</div>
+<!-- Human-in-the-Loop Safeguards Card -->
+<div class="bg-surface-container-low rounded-2xl p-space-md">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">shield_person</span>
+<h4 class="font-label-lg text-label-lg text-on-surface">Clinical Coordinator Safeguards</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+          Medora highlights administrative delays based on verified hospital EHR timestamps. Clinicians retain full discretion to defer, re-triage, or remove cases without altering medical records.
+        </p>
+<div class="flex flex-col gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span>Protocol rule engine version</span>
+<span class="font-medium text-on-surface">v4.11-OncoCare</span>
+</div>
+<div class="flex items-center justify-between">
+<span>Audit log tracking</span>
+<span class="text-secondary font-medium">Active (All sessions recorded)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

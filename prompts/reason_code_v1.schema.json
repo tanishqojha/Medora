@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "required": ["reason_code", "confidence"],
+  "properties": {
+    "reason_code": {"enum": ["cost", "distance", "fear", "feeling_better", "wrong_number", "moved", "other"]},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+  }
+}

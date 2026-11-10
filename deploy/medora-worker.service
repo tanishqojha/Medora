@@ -1,0 +1,13 @@
+[Unit]
+Description=Medora worker
+After=network-online.target
+
+[Service]
+User=medora
+WorkingDirectory=/opt/medora
+EnvironmentFile=/opt/medora/.env
+ExecStart=/usr/local/bin/uv run --project api python worker/worker.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

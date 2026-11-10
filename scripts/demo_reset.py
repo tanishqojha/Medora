@@ -5,6 +5,7 @@ and logins resolve to the newest one.
 
 Usage: uv run --project api python scripts/demo_reset.py --signed-by "Dr. Name" [--bench]
 --signed-by is the clinical lead who signs the GI pathway version for this demo tenant. A person must pass it.
+Without it the pathway stays unsigned and inactive (no flags, empty stuck list). Sign later with scripts/sign_pathway.py.
 """
 from __future__ import annotations
 
@@ -22,7 +23,7 @@ from medora.db import tx
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--signed-by", required=True, help="name of the clinical lead signing the demo pathway")
+    ap.add_argument("--signed-by", help="name of the clinical lead signing the demo pathway; omit to leave it unsigned")
     ap.add_argument("--bench", action="store_true", help="also run the 10k/100k benchmark (slow)")
     ap.add_argument("--synthea", type=Path, help="patients.csv from scripts/get_synthea.py for base demographics")
     args = ap.parse_args()
@@ -41,8 +42,9 @@ def main() -> int:
         hid = seed.create_hospital(conn, f"Kronex Demo Hospital (synthetic, reset {date.today().isoformat()})")
         versions = seed.register_pathways(conn, hid, ("gi_cancer_handover.v1", "breast_handover_demo.v1"))
         gi = versions["gi_cancer_handover.v1"]
-        pathways.sign(conn, hid, gi["id"], args.signed_by, "clinical_lead")
-        pathways.activate(conn, hid, gi["id"], args.signed_by)
+        if args.signed_by:
+            pathways.sign(conn, hid, gi["id"], args.signed_by, "clinical_lead")
+            pathways.activate(conn, hid, gi["id"], args.signed_by)
         audit.append(conn, hid, "demo_reset", "demo.reset", "hospital", hid, {"signed_by": args.signed_by})
 
     preconfirm(hid, synth.HEADERS, REGISTER_MAPPING, "Data Steward (synthetic, demo reset)")
@@ -55,7 +57,7 @@ def main() -> int:
     with tx() as conn:
         flags = conn.execute("SELECT id FROM flags WHERE hospital_id = %s AND state = 'open' ORDER BY created_at LIMIT 2",
                              (hid,)).fetchall()
-    for _ in range(3):
+    for _ in range(3 if flags else 0):
         with tx() as conn:
             att = callassist.record_attempt(conn, hid, str(flags[0]["id"]), "Meera (Care Coordinator)")
         callassist.record_outcome(hid, att, "no_answer", "tap", "Meera (Care Coordinator)")

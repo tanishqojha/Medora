@@ -1,0 +1,4 @@
+# Replace with your API domain. Caddy gets the TLS certificate by itself.
+api.example.com {
+	reverse_proxy 127.0.0.1:8000
+}

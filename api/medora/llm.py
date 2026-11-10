@@ -88,7 +88,8 @@ def _client(base_url_var: str, key_var: str) -> Any:
     base = env(base_url_var) or env("LLM_BASE_URL")
     if not key or not base:
         raise LLMUnavailable("no LLM provider configured")
-    return OpenAI(api_key=key, base_url=base, timeout=float(setting("llm.timeout_seconds")), max_retries=1)
+    # The SDK backs off and honours Retry-After on a 429. After the retries it still fails closed to a person.
+    return OpenAI(api_key=key, base_url=base, timeout=float(setting("llm.timeout_seconds")), max_retries=5)
 
 
 def call(prompt_name: str, inputs: dict[str, Any], known: dict[str, list[str]] | None = None,

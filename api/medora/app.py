@@ -73,7 +73,8 @@ def login(body: dict[str, str] = Body(...)) -> JSONResponse:
         audit.append(conn, u["hospital_id"], u["display_name"], "auth.login", "user", u["id"], {"role": u["role"]})
     token = issue(u)
     resp = JSONResponse({"token": token, "user": {"name": u["display_name"], "role": u["role"]}})
-    resp.set_cookie("medora_token", token, httponly=True, samesite="lax", max_age=12 * 3600)
+    resp.set_cookie("medora_token", token, httponly=True, samesite="lax", max_age=12 * 3600,
+                    secure=env("COOKIE_SECURE") == "1")
     return resp
 
 

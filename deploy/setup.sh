@@ -11,7 +11,7 @@ cd /opt/medora
 [ -f .env ] || cp .env.example .env
 chown -R medora:medora /opt/medora
 chmod 600 .env
-sudo -u medora bash -c 'cd /opt/medora/api && uv sync --extra messy'
+sudo -u medora bash -c 'cd /opt/medora/api && uv sync --no-dev --python 3.12 --extra messy --extra pii --extra graph'
 cp deploy/medora-*.service /etc/systemd/system/
 cp deploy/Caddyfile /etc/caddy/Caddyfile
 systemctl daemon-reload

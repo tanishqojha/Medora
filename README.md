@@ -120,6 +120,29 @@ Open <http://localhost:3000/welcome> for the landing page, or <http://localhost:
 
 Turn the Supabase Data API off or enable row level security. The app only ever connects as the limited `medora_app` role.
 
+### Hosted demo (Vercel, AWS, Supabase)
+
+The live demo splits into three parts. No Docker is involved.
+
+| Part | Where | Notes |
+|---|---|---|
+| Web app | Vercel (project `medora`, root directory `web`) | Proxies `/api/*` to the API. The target is the `API_URL` environment variable, which is baked in at build time, so change it and redeploy. |
+| API and worker | AWS EC2, one `t3.small` (2 vCPU, 2 GB RAM), Ubuntu, in Sydney (`ap-southeast-2`) | Two systemd services. Caddy terminates HTTPS and gets a Let's Encrypt certificate. |
+| Database | Supabase Postgres, session pooler on port 5432 | Same region as the VM. Events and the audit log are append-only. |
+
+The API address is an [sslip.io](https://sslip.io) name built from the VM's Elastic IP (for example `203-0-113-10.sslip.io` for `203.0.113.10`). It needs no domain purchase. Port 22 should be limited to your own address once setup is done.
+
+To rebuild the VM:
+
+1. Launch Ubuntu with at least 2 GB of RAM. Open ports 80 and 443. Attach an Elastic IP. Add 2 GB of swap, because the OCR packages are heavy.
+2. Run `sudo bash deploy/setup.sh <repo-url>`. It installs Caddy and uv, clones the repo to `/opt/medora`, installs the API with the `messy`, `pii` and `graph` extras on Python 3.12 (no dev packages), and copies the units from `deploy/`.
+3. Fill `/opt/medora/.env` from `.env.example`, with `COOKIE_SECURE=1`, `WEB_ORIGIN` set to the Vercel address and `UPLOAD_DIR=/opt/medora/uploads`. Leave out `MIGRATION_DATABASE_URL` and `API_URL`. The server must never hold the admin database URL. Use the same `JWT_SECRET` as before, or existing sessions stop working.
+4. Put the sslip.io name in `/etc/caddy/Caddyfile`, then `systemctl enable --now medora-api medora-worker` and `systemctl restart caddy`.
+5. Check `https://<name>/api/health`. It queries the database, so a pass also proves the Supabase connection.
+6. Set `API_URL` on Vercel to that address for Production and Preview, then redeploy.
+
+The data stays in Supabase, so rebuilding the VM loses nothing. Uploaded files live on the VM disk. The AWS free plan lasts six months or until its credits run out, so stop the instance when judging is over.
+
 ### Demo accounts
 
 All accounts use the password `medora-demo` (or `SEED_PASSWORD`). They are synthetic.

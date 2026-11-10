@@ -4,6 +4,8 @@ import type { NextConfig } from "next";
 const API = process.env.API_URL ?? "http://127.0.0.1:8000";
 
 const nextConfig: NextConfig = {
+  // Hides the Next.js "N" badge shown in dev mode, on every page.
+  devIndicators: false,
   // Slow calls (bulk replay, uploads) outlast the 30s default when the database is far away.
   experimental: { proxyTimeout: 300_000 },
   async rewrites() {
